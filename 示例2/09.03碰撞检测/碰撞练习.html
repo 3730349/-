@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 438px;
+			height: 269px;
+			position: relative;
+			border: 1px solid;
+			
+
+
+
+
+		}
+		.box1{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			background: red;
+			/*border-radius: 50%;*/
+			
+		}
+		.box2{
+			width: 100px;
+			height: 50px;
+			position: absolute;
+			left: 0;
+			right:0;
+			top: 0;
+			bottom: 0; 
+			margin: auto;
+			
+			
+			background: yellow;
+			}
+	</style>
+	<script type="text/javascript" src="../库/lwm.js"></script>
+</head>
+<body>
+	<div class="box" id="box">
+		<div class="box2" id="box2"></div>
+		<div class="box1" id="box1"></div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var box=Id("box");
+	var box1=Id("box1");
+	var box2=Id("box2");
+
+	var _index=0;
+	var _indexTop=0;
+	var _Vl=1;
+	var _Vt=1;
+
+	setInterval(function(){
+		_index+=_Vl;
+		_indexTop+=_Vt;
+		if (_index<=0||_index>=box.clientWidth-box1.offsetWidth) {
+			_Vl*=-1;
+
+		}		
+		if (_indexTop<=0||_indexTop>=box.clientHeight-box1.offsetHeight) {
+			_Vt*=-1;
+
+		}
+
+
+		//上超
+
+		if (_indexTop>=box2.offsetTop-box1.clientHeight&&_indexTop<=box2.offsetTop+box2.clientHeight&&_index>=box2.offsetLeft-box1.clientWidth&&_index<=box2.offsetLeft-box1.clientWidth) {
+			_Vl*=-1;
+	
+		}	
+			//上超
+		if (_indexTop>=box2.offsetTop-box1.clientHeight&&_indexTop<=box2.offsetTop+box2.clientHeight&&_index<=box2.offsetLeft+box2.clientWidth&&_index>=box2.offsetLeft+box2.clientWidth) {
+			_Vl*=-1;
+	
+		}	
+		//438 269	左超
+		if (_indexTop>=box2.offsetTop-box1.clientHeight&&_indexTop<=box2.offsetTop-box1.clientHeight&&_index<=box2.offsetLeft+box2.clientWidth&&_index>=box2.offsetLeft-box1.clientWidth) {
+			_Vt*=-1;
+	
+		}	
+		//左超	
+		if (_indexTop<=box2.offsetTop+box2.clientHeight&&_indexTop>=box2.offsetTop+box2.clientHeight&&_index<=box2.offsetLeft+box2.clientWidth&&_index>=box2.offsetLeft-box1.clientWidth) {
+			_Vt*=-1;
+	
+		}
+
+		box1.style.left=_index+"px";
+		box1.style.top=_indexTop+"px";
+	},1)
+
+
+</script>
+</html>

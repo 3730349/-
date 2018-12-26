@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 头部引入 -->
+	<style type="text/css">
+	/*标签名选择器*/
+		/*div{
+			width:100px;
+			height:100px;
+			background:blue;
+		}*/
+		/*类选择器*/
+		/* .a{
+			width: 100px;
+			height:100px;
+			background:blue;
+		} */
+		.b{
+			
+			background:black;
+		}
+		.c{
+			
+			background:yellow;
+		}
+
+		/*群组选择器 把相同的属性放一起*/
+
+		.a ,.b ,.c{
+			width: 100px;
+			height: 100px;
+
+		}
+		/*id选择器*/
+		#d{
+			width: 100px;
+			height:100px;
+			background:blue;
+		}
+		/*.a div后代选择器*/
+		.a div{
+			width: 100px;
+			height:100px;
+			background:yellow;
+		}
+
+	</style>
+	<!-- 外部引入 -->
+	<!-- <link rel="stylesheet" href="0724.css"> -->
+
+</head>
+<body>
+	<!-- 标签内引入 -->
+<!-- 这三种方法样式的选择优先权为：行内样式>页面中样式>外部css文件 -->
+
+	<!-- <div style="width: 100px;height: 100px;background:black; "></div> -->
+	<div class="a" id="d"><div></div> </div>
+	<!-- <div class="b"></div>
+	<div class="c"></div> -->
+
+</body>
+</html>

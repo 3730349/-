@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=640,user-scalable=no">
+<title>PhotoClip888</title>
+<style>
+body {
+	margin: 0;
+	text-align: center;
+}
+#box1{
+	width: 640px;
+	height: 1136px;
+	display: none;
+}
+#clipArea {
+	height: 300px;
+	width: 300px;
+	overflow: hidden;
+	margin: 0 auto;
+	
+	/*background: white url(w3_zbo_h.png)  no-repeat;*/
+	/*border:0 solid;*/
+	/*border-radius:50%;*/
+}
+#ig{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 81px;
+}
+#file,
+#clipBtn {
+	position: absolute;
+	top: 350px;
+}
+ #file{
+	left: 100px;
+} 
+#clipBtn{
+	right: 100px;
+}
+#view {
+	/*margin: 0 auto;*/
+	background: pink;
+	position: absolute;
+	top: 19px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 260px;
+	height: 260px;
+	/*background-color: #666;*/
+}
+#btn{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: red;
+	color: white;
+	border: 0 solid;
+	font-size: 1.5em;
+	border-radius: 50%;
+}
+</style>
+</head>
+<body ontouchstart="">
+	<div id="box1">
+		<div id="view"></div>
+			<div id="clipArea"></div>
+			
+			<input type="file" id="file">
+			<button id="clipBtn">截取</button>
+			
+			<img src="w3_zbo_h.png" id="ig">
+	</div>
+	<button id="btn">上传照片</button>
+
+
+
+</body>
+
+<script src="js/iscroll-zoom-min.js"></script>
+<script src="js/hammer.min.js"></script>
+<script src="js/lrz.all.bundle.js"></script>
+<script src="js/PhotoClip.js"></script>
+
+<script>
+	var btn=document.getElementById("btn");
+	var box1=document.getElementById("box1");
+
+	var pc = new PhotoClip('#clipArea', {
+		size: 260,
+		// outputSize: 640,
+		// adaptive: ['60%', '80%'],
+		file: '#file',
+		view: '#view',
+		ok: '#clipBtn',
+		// img: 'mm.jpg',
+		loadStart: function() {
+			console.log('开始读取照片');
+		},
+		loadComplete: function() {
+			ig.style.display="none";
+			console.log('照片读取完成');
+		},
+		done: function(dataURL) {
+			clipArea.style.display="none";
+			console.log(dataURL);
+			console.log(888)
+		},
+		fail: function(msg) {
+			alert(msg);
+		}
+	});
+	function photo(){
+		box1.style.display="block";
+		btn.style.display="none";
+
+	}
+
+	btn.addEventListener('click',photo);
+
+
+	// 加载的图片必须要与本程序同源，否则无法截图
+	// pc.load('mm.jpg');
+
+</script>
+</html>

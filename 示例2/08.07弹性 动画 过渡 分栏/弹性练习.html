@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+	.box{
+
+		width: 801px;
+		height: 401px;
+		border: 1px solid;
+	}
+		.b{
+
+			height: 100px;
+			display: -webkit-box;
+			-webkit-box-align:center;
+			background: #ECECEC;
+		}
+		.b1{
+			
+			height: 25px;
+			-webkit-box-flex:1;
+			background: red;
+		}
+		.b2{
+			
+			height: 50px;
+			-webkit-box-flex:1;
+			background: yellow;
+		}
+		.a{
+			height: 150px;
+			display: -webkit-box;
+			-webkit-box-align:stretch;
+		}
+		.a1{
+			
+			-webkit-box-flex:1;
+			background: red;
+		}
+		.a2{
+			
+			-webkit-box-flex:2;
+			background: yellow;
+		}
+		.a3{
+			-webkit-box-flex:3;
+			background: red;
+		}
+		.a4{
+			-webkit-box-flex:1;
+			background: yellow;
+		}
+
+		.c{
+			width: 800px;
+			height: 150px;
+			overflow: hidden;
+		}
+/*
+		子选择器:格式:选择器1>选择器2{属性:值;}注:选择器1下面的二级选择器2会添加该属性,如三级/四级中也有选择器2,则三级四级选择器2不会生效该属性*/
+		.c>div{
+			width: 400px;
+			height: 150px;
+			float: left;
+			display: -webkit-box;
+		}
+		.c1{
+			-webkit-box-align:end;
+			background: white;
+		}
+		.c2{
+			-webkit-box-align:stretch;
+			
+		}
+
+		.c5{
+			-webkit-box-flex:1;
+			background: red;
+			
+		}
+		.c6{
+			-webkit-box-flex:1;
+			background: yellow;;
+			
+		}
+		/*格式:选择器1 选择器2{属性:值;}   注:中间用空格隔开.选择器1下面的所有选择器2均会添加该属性*/
+	    .c1 div{
+			height: 25px;
+			-webkit-box-flex:1;
+		}
+		.c4{
+			background: yellow;
+		}
+		.c7{
+			background: red;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="b">
+			<div class="b1">1</div>
+			<div class="b2">2</div>
+			<div class="b1">3</div>
+	   </div>
+	   <div class="a">
+	   	    <div class="a1">1</div>
+			<div class="a2">2</div>
+			<div class="a3">3</div>
+			<div class="a4">4</div>
+	   </div>
+	   <div class="c">
+	   	<div class="c1">
+	   			<div class="c7">1</div>
+	   			<div class="c4">2</div>
+	   			<div class="c7">3</div>
+	   	</div>
+	   	<div class="c2">
+	   			<div class="c5">1</div>
+	   			<div class="c6">2</div>
+	   			<div class="c5">3</div>
+	   	</div>
+	   </div>
+</div>
+	
+</body>
+</html>

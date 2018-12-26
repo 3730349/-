@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	/*它是对字符串执行模式匹配的强大工具 ps:把规则说给计算机听 直接量的语法： /pattern/attributes（/正则/正则属性） RegExp 对象的语法： new RegExp(pattern, attributes); pattern里面为一个字符串，代表的就是正则 attributes为可选字符串，包含属性（标志）"g"、"i" 和 "m" "g":表示全局模式，用于检测所有字符串 "i":表示不区分大小写，匹配时忽略字符串大小写 
+	"m":表示匹配多行 注意：3个标志可任意组合 方法： search：检索与正则表达式相匹配的值。并返回首个匹配字符串的下标 match：找到一个或多个正则表达式的匹配。基本需要配合g。返回匹配的字符串 replace：替换与正则表达式匹配的子串。并返回替换后的字符串 . :查找单个字符，除了换行和行结束符。 
+	\w:查找单词字符。 
+	\d:查找数字。 
+	\s:查找空白字符。
+	 \b:匹配单词边界 
+	 \n:查找换行符 
+	 \u:匹配汉字 
+	 n$:匹配任何结尾为 n 的字符串。 
+	 ^n:匹配任何开头为 n 的字符串. 
+	 [abc] :查找方括号之间的任何字符。 
+	 [^abc]:查找任何不在方括号之间的字符。 
+	 [0-9]:查找任何从 0 至 9 的数字。
+	 [a-z]:查找任何从小写 a 到小写 z 的字符。 
+	 [A-Z]:查找任何从大写 A 到小写 z 的字符。 
+	 n+ :匹配任何包含至少一个 n 的字符串。 
+	 n*:匹配任何包含零个或多个 n 的字符串。
+	 n?:匹配任何包含零个或一个 n 的字符串。 
+	 n{X}:匹配包含 X 个 n 的序列的字符串。
+	 n{X,Y}:匹配包含 X 到Y 个 n 的序列的字符串。 量词 a{4} 分组组 (ab) $变量可以捕获分组 (?:ab)不捕获分组 
+	 贪婪模式 {4,6} 匹配四个到六个默认取最大 非贪婪模式 {4,6} 默认最小值 前瞻 /[a-z](?=\D]/ ?=前瞻等于 ?!前瞻不等于*/
+
+
+	//字面量写法
+	// var reg=/lin/g;
+	//构造函数写法
+	// var reg=new RegExp('lin','g'); 
+	//类 []
+	// 匹配l或i或n
+	// var reg3=/[lin]/g;
+	//量词
+	// {n}出现n次
+	// {n,m}出现n到m次
+	// {n,}至少出现n次
+	//贪婪模式默认取最大值，{3,8}?,加问号非贪婪模式，取最小值
+	// var reg=/\d{3,8}/g;
+	//匹配hello或helle 加量词{2}匹配hellohelle。
+	 // var reg=/(hell(o|e)){2}/g;
+	 //捕获分组 $1         $2   $3
+	 // var reg=/(\d{4})-(\d{2})-(\d)/g;
+	 var reg=/[a-z]/;
+
+	// var text='lin klin sflign linfs Ling';
+	// var text='12345678912345';
+	// var text='hellohelle hdskhellosa';
+	// var text='2018-10-9';
+	var text='g999';
+	// var ooo=text.replace(reg,'C');
+	var ooo=reg.test(text);
+	// var ooo=text.replace(reg,'A');
+	// console.log(text.replace(reg3,'A'));
+	console.log(ooo)
+</script>
+</html>

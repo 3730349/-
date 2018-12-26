@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+
+			width: 100px;
+			height: 100px;
+			background: red;
+			/*动画名称*/
+			/*animation-name:;*/
+			/*动画时间*/
+			/*animation-duration: ;*/
+			/*运动曲线*/
+			/*animation-timing-function: ;*/
+			/*延迟时间*/
+			/*animation-delay: ;*/
+			/*循环次数*/
+			/*infinite 无限循环*/
+			/*animation-iteration-count: ;*/
+			/*是否反向*/
+			/*animation-duration:alternate ;*/
+			position: absolute;
+			left: 0;
+			top: 0;
+			/*缩写*/
+			animation:aa 1s 3 alternate;
+
+		}
+
+		.box2{
+
+			width: 332px;
+			height: 474px;
+			background: url(img/q1.png);
+			animation:bb 0.3s steps(2) infinite;
+		}
+
+		@-webkit-keyframes aa{
+			
+			100%{
+				left: 100px;
+			}
+
+		}
+		@-webkit-keyframes bb{
+			
+			100%{
+				background-position:-664px 0; 
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<!-- <div class="box"></div> -->
+	<img  alt="" class="box2">
+	
+</body>
+</html>

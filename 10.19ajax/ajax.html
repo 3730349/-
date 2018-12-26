@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <script type="text/javascript" src="jquery-1.8.3.min.js"></script> -->
+	<script type="text/javascript" src="jquery-2.0.0/jquery.min.js"></script>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	var aa="梁";
+	$.ajax({
+			url: "http://120.79.237.113/Aj/config.php",
+			type: "POST",//GET:无参数 POST:有参数
+			dataType: "json",//默认为json，可不写
+			data: {"name":aa},		
+			// async:false,
+			success: function(msges) {
+				 // var  msges=eval("("+msges+")");
+				 // var dataObj=JSON.parse(msges);
+				 console.log(msges.data);
+				 
+			
+			},
+
+			error:function(data){
+	        	alert('网络错误888');
+			}
+		});
+
+</script>
+
+</html>

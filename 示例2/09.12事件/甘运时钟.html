@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border: 2px solid;
+			position: absolute;
+		}
+		.point{
+			width: 0;
+			height: 0;
+			border-radius: 50%;
+			border: 5px solid;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.h{
+			width: 4px;
+			height: 60px;
+			background: red;
+			position: absolute;
+			left: 99px;
+			top: 39px;
+			transform-origin: 50% 100%;
+		}
+		.m{
+			width: 3px;
+			height: 70px;
+			background: blue;
+			position: absolute;
+			left: 99px;
+			top: 29px;
+			transform-origin: 50% 100%;
+		}
+		.s{
+			width: 2px;
+			height: 80px;
+			background: green;
+			position: absolute;
+			left: 99px;
+			top: 19px;
+			transform-origin: 50% 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="clock">
+	    <!-- 时、分、秒针 -->
+	    <div class="h" id="h"></div>
+	    <div class="m" id="m"></div>
+	    <div class="s" id="s"></div>
+	    <!-- 点 -->
+	    <div class="point"></div>
+	</div>
+
+</body>
+<script type="text/javascript">
+	var _h=document.getElementById('h');
+	var _m=document.getElementById('m');
+	var _s=document.getElementById('s');
+	function Time(){
+		// 获取时间
+		var time= new Date();
+		var h=time.getHours();
+		var m=time.getMinutes();
+		var s=time.getSeconds();
+
+		// 时针的旋转角度，(h*30)是时针大体的旋转角度，(Math.floor(m / 12) * 6)是指让时针根据分针旋转的角度进行微调整，使之不会直接跳30度
+		var hour_rotate = (h*30) + (Math.floor(m / 12) * 6);
+		// 让三根针按照获取到的时间旋转相应的角度
+		_h.style.transform = 'rotate(' + hour_rotate + 'deg)';
+		_m.style.transform = 'rotate(' + (m*6) + 'deg)';
+		_s.style.transform = 'rotate(' + (s*6)+'deg)';
+	}
+	// 设定100是因为设定1000的话刷新跟不上看起来会慢一秒
+	setInterval(Time, 100);
+</script>
+<ml>

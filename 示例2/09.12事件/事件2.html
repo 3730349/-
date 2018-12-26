@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.wp{
+			width: 400px;
+			height: 400px;
+			background: blue;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="wp" id="wp">
+		<div class="box" id="box"></div>
+	</div>
+</body>
+<script type="text/javascript">
+	var _wp=document.getElementById("wp");
+	var _box=document.getElementById("box");
+	// 冒泡事件
+	_box.onclick=function(e){
+		var e=window.event||e;
+		// 阻止事件流
+		e.stopPropagation();
+		alert("box");
+	}
+	_wp.onclick=function(e){
+		var e=window.event||e;
+		// 阻止事件流
+		e.stopPropagation();
+		alert("wp")
+	}
+	document.onclick=function(){
+		alert("document");
+	}
+
+
+
+</script>
+</html>

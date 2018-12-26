@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.0/jquery.min.js"></script>
+</head>
+<style type="text/css">
+	.a{
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+</style>
+<body>
+	<div class="a" id="b"></div>
+</body>
+<script type="text/javascript">
+	var aa=document.getElementById("b");
+	// console.log(aa);
+	// alert($("#b"));
+
+	var _a=$('#b');
+	//设置样式
+	_a.css({background:'blue'});
+	//获取样式
+	// console.log(_a.css("background"));
+	//距离上面的距离
+	// console.log(_a.offset().top);
+	// _a.scrollTop(30);
+	//获取宽度，设置宽度
+/*	console.log(_a.width());
+	console.log(_a.width(300));*/
+
+	// _a.html('<div>1123</div>');
+/*	var i=1;
+	_a.html(function(){
+		return i+1;
+	});*/
+
+	// _a.attr("src");
+	//添加类
+	// _a.addClass('c');
+/*	_a.on('click',function(){
+		_a.toggleClass('c');
+	})*/
+	//js转jq
+	// var _c=document.getElementById("b");
+	// alert($(_c));
+	//jq转js
+	// alert(_a.get(0));
+	_a.append('<div>564</div>');
+</script>
+</html>

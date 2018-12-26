@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+/* 			left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+margin: auto; */
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box"></div>
+</body>
+<script type="text/javascript">
+	var box=document.getElementById("box");
+
+	window.onload=function(){
+		window.addEventListener('deviceorientation',function(e){
+			
+				var a=box.offsetTop;
+				var b=box.offsetLeft;
+				// box.innerHTML=e.beta;
+				box.innerHTML=box.offsetTop;
+				// 上
+			if (e.beta<0) {
+				box.style.top=a-10+"px";
+				if (box.offsetTop<=0) {
+				box.style.top=0+"px";
+				}
+				box.innerHTML=e.beta;
+			}	
+			// 下		
+			if (e.beta>0) {
+				box.style.top=a+10+"px";
+				box.innerHTML=e.beta;
+				if (box.offsetTop>=document.documentElement.clientHeight-box.offsetHeight) {
+					box.style.top=document.documentElement.clientHeight-box.offsetHeight+"px";
+				}
+			}	
+			// 右		
+			if (e.gamma>0) {
+				box.style.left=b+10+"px";
+				if (box.offsetLeft>=document.documentElement.clientWidth-box.offsetWidth) {
+					box.style.left=document.documentElement.clientWidth-box.offsetWidth+"px";
+				}
+			}	
+			// 左		
+			if (e.gamma<0) {
+				box.style.left=b-10+"px";
+				if (box.offsetLeft<=0) {
+					box.style.left=0+"px";
+				}
+			}
+			// console.log(1)
+			
+
+		})
+	}
+</script>
+</html>

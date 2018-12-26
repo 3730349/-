@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.show{
+			width: 400px;
+			overflow: hidden;
+
+			}
+			.box{
+				
+				width: 1600px;
+				height: 400px;
+				position: relative;
+				left: 0;
+				overflow: hidden;
+				transition: all 1s;
+			}
+			.box div{
+				width: 400px;
+				height: 400px;
+				text-align: center;
+				line-height: 400px;
+				font-size: 3em;
+				/*position: absolute;*/
+				float: left;
+			}
+			.box div:nth-child(1){
+				background: red;
+			}
+			.box div:nth-child(2){
+				background: blue;
+				
+			}
+			.box div:nth-child(3){
+				background: pink;
+				
+			}
+			.box div:nth-child(4){
+				background: yellow;
+				
+			}
+			.btn{
+				width: 400px;
+				overflow: hidden;
+				background: #CCC;
+			}
+			.btn span{
+				width: 100px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				float: left;
+				
+
+			}
+
+	</style>
+</head>
+<body>	
+	<div class="show">
+		<div class="box" id="box">
+			<div id="box1">1</div>
+			<div id="box2">2</div>
+			<div id="box3">3</div>
+			<div id="box4">4</div>
+	</div>
+
+	</div>
+
+	<div class="btn" id="btn">
+		<span id="btn1">1</span>
+		<span id="btn2">2</span>
+		<span id="btn3">3</span>
+		<span id="btn4">4</span>
+	</div>
+
+
+</body>
+<script type="text/javascript">
+	
+
+
+
+   var box=document.getElementById("box");
+   var boxDiv=box.getElementsByTagName("div");
+   var btn=document.getElementById("btn").getElementsByTagName("span");
+   	   btn[0].style.background="rgb(0,255,255)";
+   var _index=1;
+   setInterval(function(){
+   		BtnRo();
+   		box.style.left=-400*_index+"px";
+   		btn[_index].style.background="rgb(0,255,255)";	
+   		_index++;
+   		
+   		if (_index>=btn.length) {
+   			_index=0;
+   		}
+   },1000);
+
+     function BtnRo(){
+   			for (var i = 0; i < btn.length; i++) {
+   			btn[i].style.background="#CCC";
+   		}
+   	}
+
+   for (var i = 0; i < btn.length; i++) {
+   	btn[i].a=i;
+   	btn[i].onclick=function(){
+   		BtnRo();
+   		this.style.background="rgb(0,255,255)";
+   		box.style.left=-400*this.a+"px";
+   		_index=this.a;
+   	}
+   }
+
+</script>
+</html>

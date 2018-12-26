@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.wp{
+			overflow: hidden;
+		}
+		.wp div{
+			width: 100px;
+			height: 100px;
+			background: red;
+			margin: 10px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="wp" id="wp">
+		<div id="1"></div>
+		<div id="2"></div>
+		<div id="3"></div>
+		<div id="4"></div>
+		<div id="5"></div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var wp=document.getElementById("wp");
+
+	wp.onclick=function(e){
+		var e=window.event||e;
+		// e.srcElement目标对象
+		e.srcElement.style.background="yellow";
+		if (e.srcElement.id=="1") {
+			alert(2);
+		}
+		console.log(1);
+	}
+
+
+</script>
+</html>

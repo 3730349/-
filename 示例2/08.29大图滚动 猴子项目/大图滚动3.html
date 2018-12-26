@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大图滚动</title>
+</head>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+		
+		.show{
+			width: 600px;
+			overflow: hidden;
+			position: relative;
+			margin: auto;
+			margin-top: 10px;
+		}
+
+		.box{
+			overflow: hidden;
+			width: 999999px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.box img{
+			float: left;
+			width: 200px;
+		}
+		.box img:nth-child(1){
+			width: 50px;
+			height: 200px;
+		}		
+		.box img:nth-child(2){
+			width: 100px;
+			height: 200px;
+		}		
+		.box img:nth-child(3){
+			width: 300px;
+			height: 200px;
+		}		
+		.box img:nth-child(4){
+			width: 150px;
+			height: 200px;
+		}		
+		.box img:nth-child(5){
+			width: 400px;
+			height: 200px;
+		}		
+/* 		.box img:nth-child(6){
+	width: 50px;
+}
+ */
+		.box_left,.box_right{
+			overflow: hidden;
+			float: left;
+		}			
+		.box2_left,.box2_right{
+			overflow: hidden;
+			float: left;
+			left: -1000px;
+		}		
+		
+		.btn {
+			width: 100%;
+			height: 50px;
+			position: absolute;
+			overflow: hidden;
+			top: 150px;
+
+			
+		}
+	
+/* 		#btn_left {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-left: 30px;
+	background: red;
+
+}
+#btn_right {
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin-right: 30px;
+	background: red;
+
+} */
+
+	</style>
+<body>
+
+	<div class="show" id="show">
+		<div class="box" id="box">
+			<!-- <div class="box2_right" id="box2_right"></div> -->
+			<div class="box_left" id="box_left">
+				<img src="image/1.jpg" alt="">
+				<img src="image/2.jpg" alt="">
+				<img src="image/3.jpg" alt="">
+				<img src="image/4.jpg" alt="">
+				<img src="image/5.jpg" alt="">
+			</div>
+			<div class="box_right" id="box_right"></div>
+			
+		</div>
+		
+	</div>
+		
+<!-- 		<div class="btn"><input type="button" value="Left" id="btn_left"><input type="button" value="right" id="btn_right"></div> -->
+		
+	
+</body>
+
+
+	<script type="text/javascript">
+		var box=document.getElementById("box");
+		var box_left=document.getElementById("box_left");
+
+		var _img=box_left.getElementsByTagName("img");
+		 // console.log(_img);
+		var box_right=document.getElementById("box_right");
+		var show=document.getElementById("show");
+		var arr=[];
+		//获取宽度
+		 // console.log(_img[1].offsetWidth);
+
+		 for (var i = 0; i < _img.length; i++) {
+		 	arr[i]=_img[i].offsetWidth;
+		 }
+		 // console.log(arr);
+		var _index=0;
+		var _index2=0;
+		var o=arr[_index2];
+		//拷贝图片
+		box_right.innerHTML=box_left.innerHTML;
+	    var times=setInterval(move,10);
+	    var times2;
+
+		function move(){
+
+			_index+=2;
+			if (_index>=1000) {
+				_index=0;
+				_index2=-1;
+				o=0;
+
+			}
+			box.style.left=-_index+"px";
+
+			if (_index==o) {
+				
+				_index2++;
+				o+=arr[_index2];
+				clearInterval(times);
+				times2=setTimeout(function(){
+					times=setInterval(move,10);
+				},1000);
+			}
+
+		}
+
+		show.onmouseover=function(){
+			clearInterval(times);
+			clearInterval(times2);
+			
+		}		
+		show.onmouseout=function(){
+			times=setInterval(move,10);
+
+		}
+
+	</script>
+</html>

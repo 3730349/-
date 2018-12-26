@@ -1,0 +1,1208 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+	.loading{
+		width: 640px;
+		height: 1136px;
+		position: absolute;
+		background: #06D1A3;
+		z-index: 2;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+	}
+	.car{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 300px;
+		margin: auto;
+	}
+	.carle{
+		width: 76px;
+		height: 76px;
+		position: absolute;
+   		top: 368px;
+    	left: 235px;
+    	background: url(images/loading-car2.png) 1px 228px;
+    	animation: loadcar 1s infinite linear;
+	}	
+	.carri{
+		width: 53px;
+		height: 53px;
+		position: absolute;
+   		top: 390px;
+    	left: 358px;
+    	background: url(images/loading-car3.png) 51px 205px;
+
+    	animation: loadcar 1s infinite linear;
+	}
+	@-webkit-keyframes loadcar{
+		100%{
+			
+			transform: rotate(360deg);
+		}
+	}
+
+	.shadow{
+		position: absolute;
+    	top: 302px;
+    	left: 232px;
+	}
+	.load{
+		/*position: absolute;*/
+		margin-top: 465px;
+		text-align: center;
+		font-size: 2em;
+		color: white;
+
+	}
+	.swiper-container {
+	   width: 640px;
+	   height: 1136px;
+	   position: relative;
+       background: black;
+      /*display: none;*/
+      
+   	 }
+    .swiper-slide {
+      
+      width: 100%
+
+   }
+.box1{
+	width: 640px;
+	height: 1136px;
+	position: absolute;
+	/*overflow:hidden;*/
+}
+.bg{
+	position: absolute;
+	width: 100%;
+}
+.box1_bg2{
+	position: absolute;
+	left: 0;
+} 
+.play{
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	z-index: 2;
+}
+.box1_txt1{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+}
+.box1_txt2{
+	position: absolute;
+    top: 148px;
+    left: 4px;
+}
+.box1_txt3{
+	position: absolute;
+    top: 163px;
+    left: 8px;
+}
+/*烟筒*/
+.box1_txt4{
+	position: absolute;
+	top: 335px;
+	opacity: 0;
+	left: 0;
+
+	
+
+	
+}
+@-webkit-keyframes yt{
+	100%{
+		opacity: 1;
+		top: 330px;
+	}
+
+
+}
+.yt{
+	animation: yt 2s;
+	animation-fill-mode: forwards;
+}
+/*烟筒*/
+.box1_txt5{
+	position: absolute;
+	opacity: 0;
+	top: 333px;
+
+
+}
+/*后面云*/
+.box1_cloud1{
+	position: absolute;
+    top: 413px;
+    left: 157px;
+    opacity: 0;
+    animation: cloud 2s 2s infinite;
+}
+.box1_cloud2{
+	position: absolute;
+    top: 337px;
+    left: 299px;
+    opacity: 0;
+    animation: cloud 2s 2s infinite;
+}
+.box1_cloud3{
+	position: absolute;
+    top: 401px;
+    left: 369px;
+    opacity: 0;
+    animation: cloud 2s 2s infinite;
+}
+/*前面云*/
+.box1_cloud4{
+	position: absolute;
+    top: 401px;
+    left: 56px;
+    opacity: 0;
+    animation: cloud 2s 2s infinite;
+}
+.box1_cloud5{
+	position: absolute;
+    top: 417px;
+    left: 426px;
+    opacity: 0;
+    animation: cloud 2s 2s infinite;
+}
+@-webkit-keyframes cloud{
+	100%{
+		opacity: 1;
+		transform: translateY(-5px);
+	}
+}
+.Box1_car{
+	width: 640px;
+	height: 162px;
+	position: relative;
+	top: 635px;
+	overflow:hidden;
+}
+/*车*/
+.box1-car{
+	position: absolute;
+	top: 0px;	
+}
+/*轮子*/
+.box1-carleft{
+	position: absolute;
+	top: 99px;
+	right: 256px;
+}
+.box1-carright{
+	position: absolute;
+	top: 99px;
+	right: 123px;
+}
+/*车动画*/
+@-webkit-keyframes box1_run1{
+	0%{
+		transform: translate(360px,0);
+	}
+	100%{
+		transform: translate(0px,0);
+	}
+}
+/*车轮动画*/
+@-webkit-keyframes box1_run2{
+	100%{
+		transform: rotate(360deg);
+
+	}
+}
+.box1_run1{
+	animation:box1_run1 2s 1.5s;
+}
+.box1_run2{
+	animation:box1_run2 1s  2s infinite linear; 
+}
+/*车低*/
+.box1-carbj{
+	position: absolute;
+	top: 138px;
+}
+.box1-txt6{
+ position: absolute;
+ bottom: 236px;
+ left: 0;
+ right: 0;
+ margin: auto;
+}
+/*车尾气*/
+.box1-carCloud2{
+	position: absolute;
+	bottom: 63px;
+	right: 30px;
+	opacity: 0;
+	animation: carCloud 2s 2s infinite;
+}
+.box1-carCloud1{
+	position: absolute;
+	bottom: 41px;
+	right: 50px;
+	transform: scale(2);
+	opacity: 0;
+	animation: carCloud 2s 2s infinite;
+}
+.box1-carCloud3{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+	transform: scale(0.3);
+	opacity: 0;
+	animation: carCloud 2s 2s infinite;
+}
+/*尾气动画*/
+@-webkit-keyframes carCloud{
+	100%{
+		opacity: 1;
+		transform: translate(8px,-8px);
+	}
+} 
+/*箭头*/
+.box1-btn{
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0;
+}
+.jt{
+	animation:jt infinite;
+}
+@-webkit-keyframes jt{
+	100%{
+		opacity: 1;
+		transform: translateY(-10px);
+	}
+}
+
+/*2*/
+/*第一辆车*/
+.box2_1{
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+.box2_2{
+	position: absolute;
+	right: -2px;
+	top: -2px;
+}
+/*第二辆车*/
+.box2_3{
+	position: absolute;
+    left: 0px;
+    top: 243px;
+}
+.box2_car{
+    width: 640px;
+    height: 125px;
+    position: absolute;
+    top: 256px;
+}
+/*车*/
+.box2_4{
+	position: absolute;
+	left: 203px;
+    top: 3px;
+}
+/*标语*/
+.box2_5{
+	position: absolute;
+    left: -18px;
+    top: 417px;
+}
+/*车轮*/
+.box2_6left{
+	position: absolute;
+    top: 70px;
+    left: 242px;
+}
+.box2_6right{
+	position: absolute;
+    top: 70px;
+    left: 388px;
+}
+.box2_7{
+	position: absolute;
+    top: 114px;
+    left: 209px
+}
+/*车尾气*/
+.box2-carCloud1{
+	position: absolute;
+    top: 318px;
+    right: 465px;
+}
+
+.box2-carCloud4{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+    top: 289px;
+    right: 485px;
+}
+.box2-carCloud3{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+    top: 299px;
+    right: 553px;
+	transform: scale(0.3);
+}
+.box2-carCloud2{
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 328px;
+    right: 522px;
+}
+.box2_Cloud1{
+	animation: box2_carCloud1 infinite;
+}
+.box2_Cloud2{
+	animation: box2_carCloud2 infinite;
+}
+/*尾气动画*/
+@-webkit-keyframes box2_carCloud1{
+	100%{
+		opacity: 0.5;
+		transform: translate(8px,-8px);
+
+	}
+}
+@-webkit-keyframes box2_carCloud2{
+	100%{
+		opacity: 0.9;
+		transform: translate(8px,-8px);
+
+	}
+} 
+
+/*2_2*/
+.box2_bg2{
+	position: absolute;
+	top: 502px;
+	right: 0;
+}
+.box2_mj{
+    width: 640px;
+    height: 155px;
+    position: absolute;
+    top: 550px;
+}
+
+.box2_81{
+	position: absolute;
+    top: 0px;
+    left: 130px;
+
+}
+/*霉菌*/
+.box2_82{
+	position: absolute;
+    top: 0px;
+    left: 79px;
+    animation: box2_mj 1.5s 2s infinite;
+ }
+ .box2_83{
+	position: absolute;
+    top: 76px;
+    left: 154px;
+    animation: box2_mj 1.5s 2s infinite;
+ }
+ .box2_84{
+ 	width: 60px;
+ 	height: 50px;
+	position: absolute;
+    top: -30px;
+    left: 191px;
+    animation: box2_mj 1.5s 2s infinite;
+ }
+ /*霉菌动画*/
+ @-webkit-keyframes box2_mj{
+	100%{
+		transform: translate(8px,-8px);
+
+	}
+}
+ /*标语*/
+ .box2_85{
+ 	position: absolute;
+ 	top: 600px;
+ 	right: 23px;
+ }
+
+ /*2_3*/
+ .box2_91{
+ 	position: absolute;
+ 	left: 0;
+ 	top: 761px;
+ } 
+ .box2_ben{
+ 	width: 640px;
+ 	height: 179px;
+ 	position: absolute;
+ 	top: 808px;
+ }
+ /*<!-- 标语 -->*/
+ .box2_92{
+ 	position: absolute;
+ 	left: 20px;
+ 	top: 770px;
+ }
+  /*<!-- 苯 -->*/
+ .box2_93{
+ 	position: absolute;
+    left: 250px;
+    top: 49px;
+ }
+   /*<!-- 甲醛 -->*/
+ .box2_94{
+ 	position: absolute;
+    left: 402px;
+    top: 49px;
+ } 
+
+/*面具*/
+ .box2_95{
+ 	position: absolute;
+    left: 500px;
+    top: 0px;
+    animation: box2_ben 1s 3s infinite;
+ } 
+  /*气体*/
+ .box2_96{
+ 	position: absolute;
+    left: 382px;
+    top: 27px;
+    animation: box2_ben 1s 3s infinite;
+ } 
+ .box2_97{
+ 	width: 8px;
+ 	height: 40px;
+ 	position: absolute;
+    left: 496px;
+    top: 113px;
+    animation: box2_ben 1s 3s infinite;
+ } 
+ .box2_98{
+ 	position: absolute;
+    left: 483px;
+    top: 25px;
+	animation: box2_ben 1.5s 3s infinite;
+ }
+ /*气体动画*/
+ @-webkit-keyframes box2_ben{
+	100%{
+		opacity: 0.5;
+		transform: translateY(-8px);
+
+	}
+}
+
+
+ /*3*/
+ /*气球*/
+ .box3_11{
+ 	position: absolute;
+ 	top: -6px;
+ 	left: 0;
+ } 
+ .box3_12{
+ 	position: absolute;
+ 	top: 0px;
+ 	left: 0;
+ } 
+ .box3_13{
+ 	position: absolute;
+    top: -11px;
+    left: 3px;
+ } 
+ .box3_14{
+ 	position: absolute;
+ 	top: 30px;
+ 	right: 0px;
+ } 
+ .box3_15{
+ 	position: absolute;
+ 	top: 0px;
+ 	right: 0;
+ } 
+ .box3_16{
+ 	position: absolute;
+ 	top: 0px;
+ 	right: -8px;
+ }
+/*<!-- 头晕乏力恶心 -->*/
+.box3_21{
+	position: absolute;
+    top: 296px;
+    left: -3px;
+    opacity: 0;
+    animation:box3_qiu 1s 2s infinite alternate; 
+}
+.box3_22{
+	position: absolute;
+	top: 251px;
+    left: 7px;
+    opacity: 0;
+    animation:box3_qiu 2s 1.5s infinite alternate; 
+}
+.box3_23{
+	position: absolute;
+    top: 325px;
+    left: 6px;
+    opacity: 0;
+    animation:box3_qiu 2s 1s infinite alternate; 
+}
+.box3_24{
+	position: absolute;
+    top: 269px;
+    left: -5px;
+    opacity: 0;
+    animation:box3_qiu 2s 0.5s infinite alternate; 
+}
+/*球动画*/
+ @-webkit-keyframes box3_qiu{
+ 	0%{
+ 		opacity: 1;
+ 	}
+	100%{
+		opacity: 1;
+		transform: translateY(-20px);
+	}
+}
+/*楼*/
+.box3_31{
+	position: absolute;
+	top: 404px;
+
+}
+.box3_qc{
+	width: 640px;
+	height: 300px;
+	position: absolute;
+	top: 565px;
+}
+/*汽车*/
+.box3_41{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+/*人*/
+.box3_42{
+	position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation:box3_tou 0.7s 1.5s infinite; 
+}
+/*头动画*/
+ @-webkit-keyframes box3_tou{
+	100%{
+		transform: translateY(-4px);
+	}
+}
+/*气体*/
+.box3_43{
+	position: absolute;
+    top: -97px;
+    left: 291px;
+    animation:box3_qt 1s 1.5s infinite; 
+
+}
+.box3_44{
+	position: absolute;
+    top: -118px;
+    left: 327px;
+    animation:box3_qt 1s 1.5s infinite; 
+}
+.box3_45{
+	position: absolute;
+    top: -99px;
+    left: 362px;
+    animation:box3_qt 1s 1.5s infinite; 
+
+}
+/*气体动画*/
+ @-webkit-keyframes box3_qt{
+	100%{
+		opacity: 0.5;
+		transform: translateY(-8px);
+
+	}
+}
+
+
+/*呼吸道*/
+.box3_51{
+	position: absolute;
+	top: 786px;
+	left: 0;
+}
+.box3_52{
+	position: absolute;
+	top: 785px;
+	right: 0;
+}
+/*胸口*/
+.box3_53{
+	position: absolute;
+    top: 786px;
+    left: 11px;
+}
+/*标语*/
+.box3_54{
+	position: absolute;
+    top: 850px;
+    left: 10px;
+}
+
+/*4*/
+.bg2{
+	position: absolute;
+
+}
+
+/*树*/
+.box4_11{
+	position: absolute;
+	left: 4px;
+    top: 43px;
+}
+/*车*/
+.box4_12{
+	position: absolute;
+    left: 4px;
+    top: 167px;
+}
+/*对策*/
+.box4_13{
+	position: absolute;
+	left: -2px;
+    top: 80px;
+}
+
+/*异味物品*/
+.box4_21{
+	position: absolute;
+    top: 299px;
+    right: 0;
+}
+.box4_22{
+	position: absolute;
+    top: 395px;
+    left: 1px;
+}
+.box4_jin{
+	animation: box4_22 infinite alternate;
+}
+@-webkit-keyframes box4_22{
+	100%{
+		transform: translateY(-5px);
+	}
+}
+.box4_23{
+	position: absolute;
+    top: 405px;
+    left: 4px;
+}
+.box4_24{
+	position: absolute;
+	top: 332px;
+    right: -3px;
+}
+/*香水*/
+.box4_31{
+	position: absolute;
+    top: 535px;
+    left: 0;
+}
+/*禁*/
+.box4_32{
+	position: absolute;
+	top: 588px;
+    right: 3px;
+}
+
+.box4_33{
+	position: absolute;
+    top: 650px;
+    right: 0px;
+}
+/*人*/
+.box4_34{
+	position: absolute;
+    top: 569px;
+    left: -3px;
+}
+
+
+/*吸烟*/
+.box4_41{
+	position: absolute;
+    top: 751px;
+    right: 0;
+}
+.box4_42{
+	position: absolute;
+	top: 859px;
+    left: 188px;
+}
+.box4_43{
+	position: absolute;
+	top: 872px;
+    left: -58px;
+}
+.box4_44{
+	position: absolute;
+    top: 789px;
+    right: -3px;
+}
+
+
+/*5*/
+.box5_21{
+	position: absolute;
+	top: 309px;
+	left: 0;
+}
+
+/*树*/
+.box5_26{
+	position: absolute;
+    top: 373px;
+    left: 6px;
+}
+/*果*/
+.box5_22{
+	position: absolute;
+    top: 449px;
+    left: 2px;
+}
+.box5_che{
+	position: absolute;
+}
+/*车*/
+.box5_23{
+	position: absolute;
+    top: 468px;
+    left: 2px;
+}
+/*车轮*/
+.box5_24{
+	position: absolute;
+    top: 520px;
+    left: 407px;
+}
+.box5_25{
+	position: absolute;
+    top: 520px;
+    left: 251px;
+}
+.box5_chel{
+	animation: box1_run2 infinite linear;
+}
+.box5_by{
+	position: absolute;
+	bottom: 534px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+
+/*活性炭*/
+.box5_31{
+	position: absolute;
+	top: 621px;
+	right: 0;
+}
+/*牛奶*/
+.box5_32{
+	position: absolute;
+    top: 697px;
+    right: -9px;
+}
+/*车*/
+.box5_33{
+	position: absolute;
+    top: 720px;
+    right: -7px;
+}
+/*标语*/
+.box5_34{
+	position: absolute;
+    top: 856px;
+    right: -5px;
+}
+.box5_35{
+	position: absolute;
+    top: 901px;
+    right: -14px;
+}
+/*叶子*/
+.box5_36{
+	position: absolute;
+    top: 665px;
+    right: -20px;
+}
+.box5_37{
+	position: absolute;
+    top: 663px;
+    right: -13px;
+}
+.box5_38{
+	position: absolute;
+    top: 663px;
+    right: -53px;
+    opacity: 0.5;
+}
+.box5_yez{
+	animation: box5_yez infinite;
+}
+@-webkit-keyframes box5_yez{
+   100%{
+		opacity: 0;
+		transform: translateX(5px);
+	}
+}
+
+/*圆*/
+.box5_yuan1{
+	position: absolute;
+	top: 678px;
+    left: 304px;
+
+}
+.box5_yuan2{
+	position: absolute;
+    top: 670px;
+    left: 343px;
+    transform: scale(0.8);
+
+}
+.box5_yuan3{
+	position: absolute;
+    top: 725px;
+    left: 356px;
+    opacity: 0.6;
+    transform: scale(1.2);
+
+}
+.box5_yuan4{
+	position: absolute;
+    top: 657px;
+    left: 517px;
+    opacity: 0.3;
+    transform: scale(0.8);
+
+}
+.box5_yuan5{
+	position: absolute;
+    top: 650px;
+    left: 544px;
+    opacity: 0.5;
+    /*transform: scale(1.2);*/
+
+}
+.box5_yuan6{
+	position: absolute;
+    top: 646px;
+    left: 583px;
+    opacity: 0.7;
+    /*transform: scale(1.2);*/
+
+}
+
+/*6*/
+
+/*<!-- 空调清洁剂 -->*/
+.box6_11{
+	position: absolute;
+	top: 320px;
+	right: 0;
+}
+.box6_12{
+	position: absolute;
+    top: 452px;
+    left: 7px;
+}
+.box6_13{
+	position: absolute;
+    top: 427px;
+    left: 11px;
+}
+.box6_14{
+	position: absolute;
+    top: 417px;
+    left: 12px;
+}
+.box6_15{
+	position: absolute;
+	top: 370px;
+	left: 20px;
+}
+
+/*芯片*/
+.box6_21{
+	position: absolute;
+	top: 640px;
+	left: 0;
+
+}
+.box6_22{
+	position: absolute;
+    top: 680px;
+    left: -5px;
+
+}
+.box6_23{
+	position: absolute;
+    top: 674px;
+    left: -6px;
+}
+.box6_24{
+	position: absolute;
+	top: 674px;
+	/*left: 80px;*/
+
+}
+.box6_25{
+	position: absolute;
+    top: 674px;
+    left: 3px;
+
+}
+/*车*/
+.box6_26{
+	position: absolute;
+    top: 752px;
+    left: 00px;
+}
+/*车轮*/
+.box6_27{
+	position: absolute;
+	top: 826px;
+    left: 289px;
+}
+.box6_28{
+	position: absolute;
+    top: 826px;
+    left: 435px;
+}
+/*车底*/
+.box6_210{
+	position:absolute;
+	top: 758px;
+
+}
+.box6_che{
+	position: absolute;
+}
+
+/*标语*/
+.box6_29{
+	position: absolute;
+    top: 890px;
+    left: 0px;
+    right: 0;
+    margin: auto;
+}
+
+/*7*/
+.box7_logo{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.box7_car{
+	position: absolute;
+	top: -3px;
+	right: -607px;
+}
+ .box7_1{
+ 	width: 640px;
+ 	height: 173px;
+	position: absolute;
+	top: 0px;
+
+	
+} 
+ .box7_1 img{
+ 	position: absolute;
+} 
+.box7_2{
+	position: absolute;
+	top:179px;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+.box7_21{
+	position: absolute;
+	top:0px;
+	left: 0px; 
+}
+.box7_22{
+	position: absolute;
+	top:78px;
+	left: 65px; 
+}
+/*手擦玻璃*/
+.box7_23{
+	position: absolute;
+	top:2px;
+	left: -2px; 
+}
+/*手擦玻璃动画*/
+.box7_shou{
+	animation: box7_shou infinite alternate linear;
+}
+@-webkit-keyframes box7_shou{
+	0%{
+		transform-origin: 50% 100%;
+		transform: rotate(-15deg);
+	}	
+	50%{
+		transform-origin: 50% 100%;
+		transform: rotate(15deg);
+	}	
+	100%{
+		transform-origin: 50% 100%;
+		transform: rotate(15deg);
+	}
+}
+
+/*查看详情*/
+.box7_24{
+	position: absolute;
+	top:166px;
+	left: 417px; 
+}
+.box7_3{
+	position: absolute;
+	top:397px;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+.box7_4{
+	position: absolute;
+	top:615px;
+	margin: auto;
+	left: 0;
+	right: 0;
+}
+
+/*7_2*/
+.box7_31{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+/*手*/
+.box7_32{
+	position: absolute;
+    top: 64px;
+    left: 136px;
+}
+/*头*/
+.box7_33{
+	position: absolute;
+    top: 56px;
+    left: 66px;
+}
+/*标语*/
+.box7_34{
+	position: absolute;
+	top: 2px;
+	left: -2px;
+}
+.box7_35{
+	position: absolute;
+	top: 2px;
+	left: -2px;
+}
+
+.box7_41{
+	position: absolute;
+	top: 0;
+}
+.box7_42{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.box7_43{
+	position: absolute;
+	top: 47px;
+	left: 217px;
+	transform: scale(1.5);
+}
+.box7_44{
+	position: absolute;
+	top: 43px;
+	left: 197px;
+	transform: scale(0.3);
+}
+.box7_45{
+	position: absolute;
+	top: 66px;
+	left: 216px;
+	transform: scale(0.3);
+}
+ .box7_46{
+	position: absolute;
+    top: 67px;
+    left: 232px;
+	transform: scale(0.3);
+	opacity: 0.3;
+}
+ 
+ .box7_47{
+	position: absolute;
+    top: 62px;
+    left: 241px;
+	transform: scale(0.3);
+	opacity: 0.3;
+} 
+/*太阳动画*/
+.box7_ty{
+	animation: box7_ty infinite;
+}
+@-webkit-keyframes box7_ty{
+	100%{
+		opacity: 0;
+	}
+}
+.span{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 30px;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2em;
+
+}

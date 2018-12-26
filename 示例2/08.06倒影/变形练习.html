@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style type="text/css">
+		.tou{
+			width: 205px;
+			height: 400px;
+			position: relative;
+			overflow: hidden;
+			margin: auto;
+		}
+		
+		.tou-1{
+			width: 200px;
+			height: 200px;
+			border:1px solid #089BE8;
+			/*border-radius: 50%;*/
+			border-top-left-radius: 100%;
+    		border-bottom-left-radius: 97%;
+    		border-top-right-radius: 100%;
+    		border-bottom-right-radius: 97%;
+			
+			background: #089BE8;
+			position: absolute;
+			overflow: hidden;
+			border-bottom-color: transparent;
+
+
+
+		}
+		.tou-2{
+			     
+		width: 164px;
+		height: 175px;
+		border: 1px solid black;
+		/*border-radius: 50%;*/
+		border-top-left-radius: 100%;
+    		border-bottom-left-radius: 97%;
+    		border-top-right-radius: 100%;
+    		border-bottom-right-radius: 97%;
+		transform: rotate(-87deg);
+		/* transform-origin: 50% 50%; */
+		background: white;
+		left: 18px;
+		top: 23px;
+		position: absolute;
+
+		}
+		.tou-3{
+			width: 50px;
+			height: 50px;
+			border:1px solid black;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			left: 46px;
+			top: 13px;
+			border-top-left-radius: 139%;
+    		border-bottom-left-radius: 81%;
+    		border-top-right-radius: 73%;
+    		border-bottom-right-radius: 115%;
+		}
+		.tou-4{
+			width: 50px;
+			height: 50px;
+			border:1px solid black;
+			border-radius: 50%;
+			background: white;
+			position: absolute;
+			left: 102px;
+			top: 13px;
+			border-top-left-radius: 139%;
+    		border-bottom-left-radius: 81%;
+    		border-top-right-radius: 73%;
+    		border-bottom-right-radius: 115%;
+    		transform: rotate(90deg);
+		}
+		.tou-5{
+			width: 14px;
+			height: 7px;
+			text-decoration: underline;
+			border: 2px solid;
+			border-radius: 50%;
+			/*border-bottom-color:transparent;*/
+			transform: rotate(90deg);
+			background: black;
+			position: absolute;
+			top: 42px;
+			left: 69px;
+		}
+		.tou-6{
+			width: 14px;
+			height: 7px;
+			text-decoration: underline;
+			border: 2px solid;
+			border-radius: 50%;
+			/*border-bottom-color:transparent;*/
+			transform: rotate(90deg);
+			background: black;
+
+			position: absolute;
+			top: 42px;
+			left: 110px;
+		}
+		.tou-7{
+
+			width: 30px;
+			height: 30px;
+			border: 1px solid;
+			background: red;
+			border-radius: 50%;
+			background: -webkit-radial-gradient(10px 10px,white,red 20%);
+			position: absolute;
+			left: 84px;
+			top: 51px;
+
+
+		}
+		.tou-8{
+
+			height: 1px;
+			width: 88px;
+			text-decoration: underline;
+			background: black;
+			transform: rotate(90deg);
+			position: absolute;
+			left: 58px;
+			top: 129px;
+		}
+
+		.tou-9{
+			width: 231px;
+			height: 187px;
+			text-decoration: underline;
+			border: 1px solid;
+			border-radius: 61%;
+			border-top-color:transparent;
+			border-bottom-color:transparent;
+			border-left-color:transparent;
+			/*border-right-color:transparent;*/
+			transform: rotate(90deg);
+			position: absolute;
+			top: -38px;
+			left: -14px;
+		}
+		.beard-1{
+
+			width: 65px;
+			height: 1px;
+			border: 0px solid;
+			transform: rotate(21deg);
+			position: absolute;
+			background: black;
+			top: 91px;
+			left: 28px;
+		}
+		.beard-2{
+
+			width: 69px;
+			height: 1px;
+			border: 0px solid;
+			transform: rotate(1deg);
+			position: absolute;
+			background: black;
+			top: 116px;
+			left: 20px;
+		}
+		.beard-3{
+
+		    width: 64px;
+		    height: 1px;
+		    border: 0px solid;
+		    transform: rotate(-13deg);
+		    position: absolute;
+		    background: black;
+		    top: 141px;
+		    left: 27px;
+		}
+		.beard-4{
+
+		    width: 65px;
+		    height: 1px;
+		    border: 0px solid;
+		    transform: rotate(161deg);
+		    position: absolute;
+		    background: black;
+		    top: 91px;
+		    left: 111px;
+		}
+		.beard-5{
+
+			width: 69px;
+			height: 1px;
+			border: 0px solid;
+			transform: rotate(1deg);
+			position: absolute;
+			background: black;
+			top: 116px;
+			left: 115px;
+		}
+		.beard-6{
+
+		    width: 64px;
+		    height: 1px;
+		    border: 0px solid;
+		    transform: rotate(-164deg);
+		    position: absolute;
+		    background: black;
+		    top: 142px;
+		    left: 115px;
+		}
+		.neck{
+
+		    width: 126px;
+		    height: 7px;
+		    border: 1px solid;
+		    border-radius: 33%;
+		    background: red;
+		    transform: skew(10deg);
+		    position: absolute;
+		    top: 185px;
+		    left: 37px;
+
+		}
+		
+		.hand-1{
+
+		    width: 27px;
+		    height: 54px;
+		    border: 1px solid;
+		    border-top-left-radius: 49%;
+		    border-bottom-left-radius: 44%;
+		    border-right-color: transparent;
+		    border-top-color: transparent;
+		    transform: skew(-20deg);
+		    background: #089BE8;
+		    position: absolute;
+		    top: 193px;
+		    left: 19px;
+		}
+		.hand-11{
+
+			width: 31px;
+		    height: 31px;
+		    border: 1px solid;
+		    background: white;
+		    border-radius: 50%;
+		    position: absolute;
+		    top: 238px;
+		    left: 9px;
+
+
+
+		}
+		.hand-2{
+
+		    width: 27px;
+		    height: 54px;
+		    border: 1px solid;
+		    border-top-left-radius: 49%;
+		    border-bottom-left-radius: 44%;
+		    transform: skew(26deg) rotateY(180deg);
+		    border-right-color: transparent;
+		    border-top-color: transparent;
+		    /* transform: rotate(180deg); */
+		    background: #089BE8;
+		    position: absolute;
+		    top: 193px;
+		    left: 159px;
+
+		}
+		.hand-21{
+
+			width: 31px;
+		    height: 31px;
+		    border: 1px solid;
+		    background: white;
+		    border-radius: 50%;
+		    position: absolute;
+		    top: 238px;
+		    left: 166px;
+		}
+		.body-1{
+
+			width: 114px;
+		    height: 88px;
+		    border: 1px solid #039EDF;
+		    background: #039EDF;
+		    position: absolute;
+		    top: 193px;
+		    left: 46px;
+		}
+		.body-2{
+
+			width: 92px;
+			height: 100px;
+			border: 1px solid;
+			border-radius: 50%;
+			position: absolute;
+			top: 173px;
+			left: 57px;
+			background: white;
+			border-top-color: transparent;
+
+		}
+
+		.body-3{
+
+			    width: 67px;
+			    height: 37px;
+			    border: 1px solid;
+			    border-bottom-left-radius: 60px;
+			    border-bottom-right-radius: 60px;
+			    background: white;
+			    position: absolute;
+			    top: 225px;
+			    left: 69px;
+
+		}
+		.foot-1{
+
+			    width: 50px;
+			    height: 10px;
+			    background: #039EDF;
+			    border: 0px solid;
+			    /*border-top-right-radius: 50%;*/
+			    position: absolute;
+			    top: 283px;
+			    left: 46px;
+		}
+		.foot-12{
+			    width: 58px;
+			    height: 16px;
+			    border: 1px solid;
+			    border-top-left-radius: 49%;
+			    border-top-right-radius: 50%;
+			    border-bottom-left-radius: 35%;
+			    border-bottom-right-radius: 50%;
+			    /*transform: skew(-20deg);*/
+			    background: white;
+			    position: absolute;
+			    top: 290px;
+			    left: 40px;
+
+
+		}
+		.foot-2{
+
+			    width: 50px;
+			    height: 10px;
+
+			    background: #039EDF;
+			    position: absolute;
+			    top: 283px;
+			    left: 112px;
+		}
+		.foot-22{
+			    width: 58px;
+			    height: 16px;
+			    border: 1px solid;
+			    border-top-left-radius: 50%;
+			    border-top-right-radius: 49%;
+			    border-bottom-left-radius: 50%;
+			    border-bottom-right-radius: 35%;
+			    background: white;
+			    position: absolute;
+			    top: 290px;
+			    left: 107px;
+
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="tou">
+		<div class="tou-1"></div>
+		<div class="tou-2"></div>
+		<div class="tou-3"></div>
+		<div class="tou-4"></div>
+		<div class="tou-5"></div>
+		<div class="tou-6"></div>
+		<div class="tou-7"></div>
+		<div class="tou-8"></div>
+		<div class="tou-9"></div>
+		<div class="beard-1"></div>
+		<div class="beard-2"></div>
+		<div class="beard-3"></div>
+		<div class="beard-4"></div>
+		<div class="beard-5"></div>
+		<div class="beard-6"></div>
+		
+		
+		<div class="hand-1"></div>
+		<div class="hand-11"></div>
+		<div class="hand-2"></div>
+		<div class="hand-21"></div>
+		<div class="body-1"></div>
+		<div class="body-2"></div>
+		<div class="neck"></div>
+		<div class="body-3"></div>
+		
+		<div class="foot-12"></div>
+		<div class="foot-1"></div>
+		
+		<div class="foot-22"></div>
+		<div class="foot-2"></div>
+
+		
+
+	</div>
+	
+</body>
+</html>

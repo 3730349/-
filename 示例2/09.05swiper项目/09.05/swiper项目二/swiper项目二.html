@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=640,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="swiper.css">
+  <link rel="stylesheet" href="swiper-4.3.5.min.css">
+  <link rel="stylesheet" href="../swiper项目一/animate.min.css">
+
+  <script type="text/javascript" src="swiper2js.js"></script>
+
+</head>
+<body>
+    <div class="loading" id="loading">
+    <!-- 车 -->
+    <img src="images/loading-car1.png" class="car">
+    <!-- 阴影 -->
+    <img src="images/loading-car4.png" class="shadow">
+    <!-- 车轮 -->
+    <div class="carle"></div>
+    <div class="carri"></div>
+    <div class="load">loading...<span id="num">0%</span></div>
+    </div>
+	<div class="swiper-container" id="swiper_container">
+      <div class="swiper-wrapper">
+
+       <div class="swiper-slide">
+           <!-- 1 -->
+              <div class="box1">
+               <!-- 背景 -->
+               
+               <img src="images/p1-bg.jpg" class="bg">
+          
+               <img src="images/p1-txt1.png" class="box1_txt1 ani"
+               data-slide-in="at 600 from fadeInLeft during 1500">
+               <img src="images/p1-txt2.png" class="box1_txt2 ani"
+               data-slide-in="at 700 from zoomIn during 1500">
+               <img src="images/p1-txt3.png" class="box1_txt3 ani"
+               data-slide-in="at 800 from fadeInRight during 1500">
+               <!-- 烟筒 -->
+               <img src="images/p1-content-bg2.png" class="ani box1_txt5"  data-slide-in="at 500 from fadeInUp during 1500" >
+               <!-- 烟 -->
+               <img src="images/p1-cloud1.png" class="box1_cloud1">
+               <img src="images/p1-cloud1.png" class="box1_cloud2">
+               <img src="images/p1-cloud1.png" class="box1_cloud3">
+                 <!-- 烟筒 -->
+               <img src="images/p1-content-bg1.png" class="box1_txt4 ani"
+               data-slide-in=" from fadeInUp during 1500">
+                <!-- 烟 -->
+               <img src="images/p1-cloud2.png" class="box1_cloud4">
+               <img src="images/p1-cloud2.png" class="box1_cloud5">
+               <img src="images/p1-bg2.png" class="box1_bg2">
+               <div class="Box1_car ani"
+               data-slide-in="from box1_run1 during 2000">
+                 <!-- !-- 车 -->
+               <img src="images/p1-car1.png" class="box1-car ani"
+               >
+               <!-- 尾气 -->
+               <img src="images/p1-carCloud.png" class="box1-carCloud2">
+               <img src="images/p1-carCloud.png" class="box1-carCloud1">
+               <img src="images/p1-carCloud.png" class="box1-carCloud3">
+                <!-- 车阴影 -->
+               <img src="images/p1-car3.png" class="box1-carbj ani"
+               >
+               <!-- 车轮 -->
+               <img src="images/p1-car2.png" class="box1-carleft ani"
+                data-slide-in="from box1_run2 during 1500">
+               <img src="images/p1-car2.png" class="box1-carright ani"
+                 data-slide-in="from box1_run2 during 1500">
+          
+             </div>
+               
+               <img src="images/p1-txt4.png" class="box1-txt6 ani"
+               data-slide-in="at 2000 from fadeInLeft during 1500">
+               <!-- 箭头 -->
+               <img src="images/each-page-btn.png" class="box1-btn ani"
+               data-slide-in="at 2300 from fadeIn during 1500">
+          
+              </div>
+          </div>
+                    <!-- 2 -->
+        <div class="swiper-slide">
+ 
+   <div class="box1" style="background: #24CBF2">
+     <!-- 第一辆车 -->
+     <img src="images/p2-title.png" class="box2_1 ani"
+     data-slide-in="from fadeInUp during 1000">
+     <img src="images/p2-car.png" class="box2_2 ani"
+     data-slide-in="at 1000 from zoomIn during 1000">
+     <!-- 第二辆车  -->
+     <img src="images/p2-content1-bg.png" class="box2_3 ani"
+     data-slide-in="at 1200 from fadeInLeft during 1000">
+     
+     <img src="images/p2-txt1.png" class="box2_5 ani"
+     data-slide-in="at 1500 from fadeInLeft during 1000">
+ 
+     <div class="box2_car ani"
+     data-slide-in="at 1000 from fadeInLeft during 1000">
+        <!-- 车 -->
+       <img src="images/p2-content1-1.png" class="box2_4">
+       <!-- 车底 -->
+       <img src="images/p2-content1-4.png" class="box2_7">
+       <!-- 车轮 -->
+       <img src="images/p2-content1-2.png" class="box2_6left ani"
+       data-slide-in="at1300 from box1_run2 during 1500">
+       <img src="images/p2-content1-2.png" class="box2_6right ani"
+       data-slide-in="at 1300 from box1_run2 during 1500">
+     </div>
+     
+     <!-- 尾气 -->
+     <img src="images/p2-content1-3.png" class="box2-carCloud1 ani"
+     data-slide-in="at 2000 from fadeIn during 1500"
+     data-slide-out="at 100 to box2_Cloud2 use swing during 1000 force">
+     <img src="images/p2-content1-3.png" class="box2-carCloud2 ani"
+     data-slide-in="at 2500 from fadeIn during 1500"
+     data-slide-out="at 120 to box2_Cloud1 use swing during 1000 force">
+     <img src="images/p2-content1-3.png" class="box2-carCloud3 ani"
+     data-slide-in="at 2500 from fadeIn during 1500"
+     data-slide-out="at 140 to box2_Cloud1 use swing during 1000 force">
+     <img src="images/p2-content1-3.png" class="box2-carCloud4 ani"
+     data-slide-in="at 2000 from fadeIn during 1500"
+     data-slide-out="at 160 to box2_Cloud2 use swing during 1000 force">
+ 
+     <!-- 霉菌 -->
+     <img src="images/p2-content2-bg.png" class="box2_bg2 ani"
+     data-slide-in="at 1900 from fadeInRight during 1500">
+     <div class="box2_mj ani"
+     data-slide-in="at 1800 from fadeInRight during 1500">
+         <img src="images/p2-content2-1.png" class="box2_81">
+         <!-- 三个霉菌 -->
+         <img src="images/p2-content2-2.png" class="box2_82">
+         <img src="images/p2-content2-2.png" class="box2_83">
+         <img src="images/p2-content2-2.png" class="box2_84">
+     </div>
+     
+     <!-- 标语 -->
+     <img src="images/p2-txt2.png" class="box2_85 ani"
+     data-slide-in="at 2000 from fadeInRight during 1500">
+ 
+     <!-- 2_3 -->
+     <img src="images/p2-content1-bg.png" class="box2_91 ani"
+     data-slide-in="at 2800 from fadeInLeft during 1500">
+     <!-- 标语 -->
+     <img src="images/p2-txt3.png" class="box2_92 ani"
+     data-slide-in="at 2900 from fadeInLeft during 1500">
+     <div class="box2_ben ani"
+          data-slide-in="at 2700 from fadeInLeft during 1500">
+         <!-- 苯 -->
+         <img src="images/p2-content3-1.png" class="box2_93">
+         <!-- 甲醛 -->
+         <img src="images/p2-content3-2.png" class="box2_94">
+         <!-- 气体 -->
+         <img src="images/p2-content3-3.png" class="box2_95">
+           
+         <img src="images/p2-content3-4.png" class="box2_96">
+         <img src="images/p2-content3-4.png" class="box2_97">
+         <img src="images/p2-content3-4.png" class="box2_98">
+     </div>
+     
+     
+     <!-- 箭头 -->
+     <img src="images/each-page-btn.png" class="box1-btn ani"
+      data-slide-in="at 3000 from fadeIn during 1500">
+ 
+   </div>
+ </div> 
+        <!-- 3 -->
+        <div class="swiper-slide">
+1
+  <div class="box1">
+    <!-- 背景 -->
+    <img src="images/p3-bg.jpg" class="bg">
+    <!-- 球 -->
+    <img src="images/p3-title3.png" class="box3_13 ani"
+    data-slide-in="at 1000 from fadeInDown during 1500">
+    <img src="images/p3-title5.png" class="box3_15 ani"
+    data-slide-in="from fadeInDown during 1500">
+    <img src="images/p3-title6.png" class="box3_16 ani"
+    data-slide-in="from fadeInDown during 1500">
+    <img src="images/p3-title2.png" class="box3_12 ani"
+    data-slide-in="from fadeInDown during 1500">
+    <img src="images/p3-title1.png" class="box3_11 ani"
+    data-slide-in="at 1000 from fadeInDown during 1500">  
+    <img src="images/p3-title4.png" class="box3_14 ani"
+    data-slide-in="at 1000 from fadeInDown during 1500">
+    <!-- 头晕乏力恶心 -->
+    <img src="images/p3-txt1.png" class="box3_21 "
+    >
+    <img src="images/p3-txt2.png" class="box3_22 "
+     >
+    <img src="images/p3-txt3.png" class="box3_23 "
+    >
+    <img src="images/p3-txt4.png" class="box3_24 "
+    >
+
+    <!-- 楼 -->
+    <img src="images/p3-content-bg2.png" class="box3_31 ani"
+    data-slide-in="at 300 from fadeIn during 1500">
+    <img src="images/p3-content-bg1.png" class="box3_31 ani"
+    data-slide-in="at 100 from fadeIn during 1500">
+    <div class="box3_qc ani"
+    data-slide-in="at 1500 from fadeInRight during 1500">
+          <!-- 汽车 -->
+        <img src="images/p3-car2.png" class="box3_41">
+        <!-- 人 -->
+        <img src="images/p3-car1.png" class="box3_42">
+        <!-- 气体 -->
+        <img src="images/p3-car3.png" class="box3_43">
+        <img src="images/p3-car3.png" class="box3_44">
+        <img src="images/p3-car3.png" class="box3_45">
+    </div>
+    
+    <!-- 呼吸道 -->
+    <img src="images/p3-txt5-1.png" class="box3_51 ani"
+    data-slide-in="at 1800 from fadeInLeft during 1500">
+    <img src="images/p3-txt5-2.png" class="box3_52 ani"
+    data-slide-in="at 1900 from fadeInRight during 1500">
+    <!-- 胸口 -->
+    <img src="images/p3-txt5-3.png" class="box3_53 ani"
+    data-slide-in="at 1600 from zoomIn during 1500">
+    <!-- 标语 -->
+    <img src="images/p3-txt6.png" class="box3_54 ani"
+    data-slide-in="at 3000 from fadeIn during 1500">
+
+    <!-- 箭头 -->
+    <img src="images/each-page-btn.png" class="box1-btn ani"
+    data-slide-in="at 3000 from fadeIn during 1500">
+  </div>
+</div>
+
+        <!-- 4 -->
+        <div class="swiper-slide">
+<!-- 1 -->
+  <div class="box1">
+    <!-- 背景 -->
+    <img src="images/p4-bg1.png" class="bg">
+    <img src="images/p4-bg2.png" class="bg2">
+    <!-- 树 -->
+    <img src="images/p4-title1.png" class="box4_11 ani"
+     data-slide-in="at 600 from fadeInUp during 1000">
+    <!-- 车 -->
+    <img src="images/p4-car.png" class="box4_12 ani"
+    data-slide-in="from fadeInDown during 1000">
+    <!-- 对策 -->
+    <img src="images/p4-title2.png" class="box4_13 ani"
+    data-slide-in="at 700 from fadeInRight during 1000">
+
+    <!-- 异味物品 -->
+    <img src="images/p4-content1.png" class="box4_21 ani"
+    data-slide-in="at 700 from fadeInUp during 1000">
+    <!-- 禁 -->
+    <img src="images/p4-txt2-1.png" class="box4_22 ani"
+    data-slide-in="at 900 from fadeIn during 1000"
+    data-slide-out="at 100 to box4_jin use swing during 1000 force">
+    <img src="images/p4-txt2.png" class="box4_23 ani"
+    data-slide-in="at 1000 from fadeIn during 1000">
+    <!-- 人 -->
+    <img src="images/p4-txt1.png" class="box4_24 ani"
+    data-slide-in="at 800 from fadeInRight during 1000">
+
+    <!-- 香水 -->
+    <img src="images/p4-content2.png" class="box4_31 ani"
+    data-slide-in="at 1500 from fadeInUp during 1000">
+    <!-- 禁 -->
+    <img src="images/p4-txt4-1.png" class="box4_32 ani"
+    data-slide-in="at 1700 from fadeIn during 1000"
+    data-slide-out="at 100 to box4_jin use swing during 1000 force">
+    <img src="images/p4-txt4.png" class="box4_33 ani"
+    data-slide-in="at 1800 from fadeIn during 1000">
+    <!-- 人 -->
+    <img src="images/p4-txt3.png" class="box4_34 ani"
+    data-slide-in="at 1600 from fadeInLeft during 1000">
+
+
+      <!-- 吸烟 -->
+    <img src="images/p4-content3.png" class="box4_41 ani"
+    data-slide-in="at 2300 from fadeInUp during 1000">
+    <!-- 禁 -->
+    <img src="images/p4-txt2-1.png" class="box4_42 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 100 to box4_jin use swing during 1000 force">
+    <img src="images/p4-txt2.png" class="box4_43 ani"
+    data-slide-in="at 2600 from fadeIn during 1000">
+    <!-- 人 -->
+    <img src="images/p4-txt5.png" class="box4_44 ani"
+    data-slide-in="at 2400 from fadeInRight during 1000">
+
+      <!-- 箭头 -->
+    <img src="images/each-page-btn.png" class="box1-btn ani"
+    data-slide-in="at 2600 from fadeIn during 1000"
+    data-slide-out="at 100 to jt use swing during 2000 force">
+    
+  </div>
+</div>
+
+        <!-- 5 -->
+        <div class="swiper-slide">
+<!-- 1 -->
+  <div class="box1">
+    <!-- 背景 -->
+    <img src="images/p5-bg.jpg" class="bg">
+    <img src="images/p4-bg2.png" class="bg2">
+    <!-- 树 -->
+    <img src="images/p4-title1.png" class="box4_11 ani"
+     data-slide-in="at 600 from fadeInUp during 1000">
+    <!-- 车 -->
+    <img src="images/p4-car.png" class="box4_12 ani"
+    data-slide-in="from fadeInDown during 1000">
+    <!-- 对策 -->
+    <img src="images/p5-title2.png" class="box4_13 ani"
+    data-slide-in="at 700 from fadeInRight during 1000">
+
+      <!-- 水果 -->
+    <img src="images/p5-content1.png" class="box5_21 ani"
+    data-slide-in="at 700 from fadeInLeft during 1000">
+    <!-- 树 -->
+    <img src="images/p5-txt1-4.png" class="box5_26 ani"
+    data-slide-in="at 1800 from fadeInUp during 1000">
+    <!-- 果 -->
+    <img src="images/p5-txt1-3.png" class="box5_22 ani"
+    data-slide-in="at 1500 from fadeInDown during 1000">
+    <div class=" ani" data-slide-in="at 900 from fadeInLeft during 1000">
+    <!-- 车 -->
+<img src="images/p5-txt1-1.png" class="box5_23 ani"
+>
+<!-- 车轮 -->
+<img src="images/p5-txt1-2.png" class="box5_24 ani"
+data-slide-in="at 1000 from box5_chel during 1000">
+<img src="images/p5-txt1-2.png" class="box5_25 ani"
+data-slide-in="at 1000 from box5_chel during 1000">
+    </div>
+    <!-- 标语 -->
+    <img src="images/p5-txt2.png" class="box5_by ani"
+    data-slide-in="at 1200 from fadeIn during 1000">
+    
+
+    <!-- 活性炭 -->
+    <img src="images/p5-content2.png" class="box5_31 ani"
+    data-slide-in="at 2100 from fadeInUp during 1000">
+    <!-- 牛奶 -->
+    <img src="images/p5-txt3-2.png" class="box5_32 ani"
+    data-slide-in="at 2500 from fadeInDown during 1000">
+    <!-- 车 -->
+    <img src="images/p5-txt3-1.png" class="box5_33 ani"
+    data-slide-in="at 2300 from zoomIn during 1000">
+    <!-- 标语 -->
+    <img src="images/p5-txt4.png" class="box5_34 ani"
+    data-slide-in="at 2600 from fadeInLeft during 1000">
+    <img src="images/p5-txt5.png" class="box5_35 ani"
+    data-slide-in="at 2700 from fadeInRight during 1000">
+    <!-- 叶子 -->
+    <img src="images/p5-txt3-4.png" class="box5_36 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 50 to box5_yez use swing during 1000 force">
+    <img src="images/p5-txt3-5.png" class="box5_37 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 200 to box5_yez use swing during 1000 force">
+    <img src="images/p5-txt3-6.png" class="box5_38 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 350 to box5_yez use swing during 1000 force"> 
+    <!-- 圆 -->
+    <img src="images/p5-txt3-3.png" class="box5_yuan1 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 50 to box5_yez use swing during 1000 force">
+    <img src="images/p5-txt3-3.png" class="box5_yuan2 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 150 to box5_yez use swing during 1000 force">
+    <img src="images/p5-txt3-3.png" class="box5_yuan3 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 300 to box5_yez use swing during 1000 force">           
+    <img src="images/p5-txt3-3.png" class="box5_yuan4 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 100 to box5_yez use swing during 1000 force">
+    <img src="images/p5-txt3-3.png" class="box5_yuan5 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 200 to box5_yez use swing during 1000 force">
+    <img src="images/p5-txt3-3.png" class="box5_yuan6 ani"
+    data-slide-in="at 2500 from fadeIn during 1000"
+    data-slide-out="at 300 to box5_yez use swing during 1000 force">
+
+      <!-- 箭头 -->
+    <img src="images/each-page-btn.png" class="box1-btn ani"
+     data-slide-in="at 2600 from fadeIn during 1000"
+     data-slide-out="at 100 to jt use swing during 2000 force">
+
+  </div>
+</div>
+
+          <!-- 6 -->
+        <div class="swiper-slide">
+<!-- 1 -->
+  <div class="box1">
+    <!-- 背景 -->
+    <img src="images/p6-bg.jpg" class="bg">
+    <img src="images/p4-bg2.png" class="bg2">
+    <!-- 树 -->
+    <img src="images/p4-title1.png" class="box4_11 ani" ani   
+    data-slide-in="at 600 from fadeInUp during 1000">
+    <!-- 车 -->
+    <img src="images/p4-car.png" class="box4_12 ani"
+    data-slide-in="from fadeInDown during 1000">
+    <!-- 对策 -->
+    <img src="images/p6-title2.png" class="box4_13 ani"
+     data-slide-in="at 700 from fadeInRight during 1000">
+
+
+    <!-- 空调清洁剂 -->
+    <img src="images/p6-content1.png" class="box6_11 ani"
+     data-slide-in="at 1000 from fadeInUp during 1000">
+    <img src="images/p6-txt1.png" class="box6_12 ani"
+     data-slide-in="at 1100 from zoomIn during 1000">
+    <img src="images/p6-txt2.png" class="box6_13 ani"
+    data-slide-in="at 1200 from rotateInDownRight during 1000">
+    <img src="images/p6-txt3.png" class="box6_14 ani"
+    data-slide-in="at 1300 from bounceIn during 1000">
+    <img src="images/p6-txt4.png" class="box6_15 ani"
+    data-slide-in="at 1400 from fadeInRight during 1000">
+
+    <!-- 空调芯片 -->
+    <img src="images/p6-content2.png" class="box6_21 ani"
+    data-slide-in="at 1700 from fadeInUp during 1000">
+    <!-- 圈 -->
+    <img src="images/p6-txt5.png" class="box6_22 ani"
+    data-slide-in="at 2000 from fadeInRight during 1000">
+    <!-- 芯片 -->
+    <img src="images/p6-txt5-1.png" class="box6_23 ani"
+    data-slide-in="at 2600 from fadeIn during 1000">
+    <img src="images/p6-txt5-3.png" class="box6_24 ani"
+    data-slide-in="at 3200 from fadeIn during 1000">
+    <!-- 箭头 -->
+    <img src="images/p6-txt5-2.png" class="box6_25 ani"
+    data-slide-in="at 2800 from rotateInDownLeft during 1000">
+    <div class="ani" data-slide-in="at 1900 from fadeInRight during 1000">
+        <!-- 车 -->
+        <img src="images/p6-txt6-1.png" class="box6_26 "
+        >
+        <!-- 车底 -->
+        <img src="images/p6-txt6-3.png" class="box6_210 ">
+        <!-- 车轮 -->
+        <img src="images/p6-txt6-2.png" class="box6_27 ani"
+        data-slide-in="at 2000 from box5_chel during 1000">
+        <img src="images/p6-txt6-2.png" class="box6_28 ani"
+        data-slide-in="at 2000 from box5_chel during 1000">
+    </div>
+    
+    <!-- 标语 -->
+    <img src="images/p6-txt7.png" class="box6_29 ani"
+    data-slide-in="at 2300 from fadeInLeft during 1000">
+
+       <!-- 箭头 -->
+    <img src="images/each-page-btn.png" class="box1-btn">
+     </div>
+</div>
+
+        <!-- 7 -->
+        <div class="swiper-slide">
+        <!-- 1 -->
+          <div class="box1">
+            <!-- 背景 -->
+            <img src="images/p7-bg.jpg" class="bg">
+            <!-- 丰田标志 -->
+            <img src="images/p7-logo.png" class="box7_logo ani"
+            data-slide-in="at 3000 from fadeInDown during 800">
+            <div class="box7_1">
+              <img src="images/p7-txt1.png" class="ani" 
+              data-slide-in="at 500 from bounceIn during 800">
+              <img src="images/p7-txt2.png" class="ani"
+              data-slide-in="at 700 from bounceIn during 800">
+              <img src="images/p7-txt3.png" class="ani"
+              data-slide-in="at 900 from bounceIn during 800">
+              <img src="images/p7-txt4.png" class="ani"
+              data-slide-in="at 1100 from bounceIn during 800">
+              <img src="images/p7-txt5.png" class="ani"
+              data-slide-in="at 1300 from bounceIn during 800">
+              <img src="images/p7-txt6.png" class="ani"
+              data-slide-in="at 1500 from bounceIn during 800">
+              <img src="images/p7-txt7.png" class="ani"
+              data-slide-in="at 1700 from bounceIn during 800">
+              <img src="images/p7-txt8.png" class="ani"
+              data-slide-in="at 1900 from bounceIn during 800">
+              <img src="images/p7-txt9.png" class="ani"
+              data-slide-in="at 2100 from bounceIn during 800">
+              <img src="images/p7-txt10.png" class="ani"
+              data-slide-in="at 2300 from bounceIn during 800">
+              <img src="images/p7-txt11.png" class="ani"
+              data-slide-in="at 2500 from bounceIn during 800">
+            </div>
+            <!-- 车 -->
+            <img src="images/p7-car.png" class="box7_car ani"
+            data-slide-in="at 0 from fadeInLeft during 5000">
+            <!-- 起雾 -->
+            <div class="box7_2">
+              <!-- bg -->
+              <img src="images/p7-content1-bg.png" class="ani" 
+              data-slide-in="at 3500 from fadeInUp during 800" >
+              <!-- 窗 -->
+              <img src="images/p7-content1.png" class="box7_21 ani"
+              data-slide-in="at 3800 from fadeIn during 800">
+              <!-- 手 -->
+              <img src="images/p7-content1-hand.png" class="box7_22 ani"
+             data-slide-in="at 3800 from fadeIn during 800" 
+             data-slide-out="at 10 to box7_shou use swing during 1500 force">
+              <img src="images/p7-content1-txt.png" class="box7_23 ani"
+              data-slide-in="at 4000 from fadeInDown during 800">
+              <!-- 查看详情 -->
+              <img src="images/p7-btn1.png" class="box7_24 ani"
+              data-slide-in="at 4000 from fadeInRight during 800">
+            </div>           
+             <!--垫脚 -->
+            <div class="box7_3">
+              <!-- bg -->
+              <img src="images/p7-content2-bg.png" class="ani" 
+              data-slide-in="at 4300 from fadeInUp during 800">
+              <!-- 人 -->
+              <img src="images/p7-content2.png" class="box7_31 ani"
+              data-slide-in="at 4600 from fadeIn during 800">
+              <!-- 手 -->
+              <img src="images/p7-content2-hand.png" class="box7_32 ani"
+              data-slide-in="at 4600 from fadeIn during 800">
+              <!-- 头 -->
+              <img src="images/p7-content2-head.png" class="box7_33 ani"
+              data-slide-in="at 4600 from fadeIn during 800">
+              <!-- 标语 -->
+              <img src="images/p7-content2-txt1.png" class="box7_34 ani"
+              data-slide-in="at 4900 from fadeInDown during 800">
+              <img src="images/p7-content2-txt2.png" class="box7_35 ani"
+              data-slide-in="at 5300 from fadeInDown during 800">
+              <!-- 查看详情 -->
+              <img src="images/p7-btn2.png" class="box7_24 ani"
+              data-slide-in="at 5500 from fadeInRight during 800">
+            </div>           
+            <!-- 车险 -->
+            <div class="box7_4">
+              <!-- bg -->
+              <img src="images/p7-content3-bg.png" class="ani" 
+              data-slide-in="at 5800 from fadeInUp during 800">
+              <img src="images/p7-content3.png" class="box7_41 ani"
+              data-slide-in="at 6100 from fadeIn during 800">
+              <!-- 窗 -->
+              <img src="images/p7-content3-car.png" class="box7_42 ani"
+              data-slide-in="at 6100 from fadeIn during 800">
+              <!-- 太阳 -->
+              <img src="images/p7-content3-sun.png" class="box7_43 ani"
+              data-slide-in="at 6100 from fadeIn during 800">
+              <img src="images/p7-content3-sun.png" class="box7_44 ani"
+              data-slide-in="at 6100 from fadeIn during 800"
+              data-slide-out="at 100 to box7_ty use swing during 2000 force">
+              <img src="images/p7-content3-sun.png" class="box7_45 ani"
+              data-slide-in="at 6100 from fadeIn during 800"
+              data-slide-out="at 120 to box7_ty use swing during 2000 force">
+              <img src="images/p7-content3-sun.png" class="box7_46 ani"
+              data-slide-in="at 6100 from fadeIn during 800"
+              data-slide-out="at 140 to box7_ty use swing during 2000 force">
+              <img src="images/p7-content3-sun.png" class="box7_47 ani"
+              data-slide-in="at 6100 from fadeIn during 800"
+              data-slide-out="at 160 to box7_ty use swing during 2000 force">
+
+              <img src="images/p7-content3-txt.png" class="box7_23 ani"
+              data-slide-in="at 6500 from fadeInDown during 800">
+              
+              <!-- 查看详情 -->
+              <img src="images/p7-btn3.png" class="box7_24 ani"
+              data-slide-in="at 6700 from fadeInRight during 800">
+            </div>
+            <span class="span ani" 
+            data-slide-in="at 6700 from fadeIn during 800">@广汽丰田&nbsp出品</span>            
+          </div>
+        </div>
+
+                  
+      </div>
+            <img src="images/music-play.png" class="play" id="play">
+            <!-- <img src="images/music-stop.png" class="play"> -->
+
+            <audio  id="audio" autoplay="autoplay">
+              <source src="music/bg-music.mp3">
+            </audio>
+      </div>
+
+
+>
+</body>
+
+  <script src="swiper-4.3.5.min.js"></script>
+  <!-- <script src="swiper.animate1.0.3.min.js"></script> -->
+  <script src="swiper.animate-twice.min.js"></script>
+</html>

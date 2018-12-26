@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="box" id="box"></div>
+	
+
+
+
+</body>
+<script type="text/javascript">
+	var _box=document.getElementById("box");
+
+	_box.onmousedown=function(e){
+		// offsetX:鼠标距离父体Y轴的左边距离
+		// offsetY:鼠标距离父体X轴的上边距离
+		// clientX:鼠标距离页面Y轴的左边距离
+		// clientY:鼠标距离页面X轴的上边距离
+		console.log(e);
+	}
+
+
+</script>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		
+		.box1{
+			width: 100px;
+			height: 100px;
+			background: rgba(255,0,0,0.3);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.box2{
+			width: 100px;
+			height: 100px;
+			background: rgba(0,255,0,0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateZ(100px);
+		}
+		.box3{
+			width: 100px;
+			height: 100px;
+			background: rgba(50,160,50,0.5);
+			transform: rotateY(90deg) translateZ(50px)  translateX(-50px);
+			position: absolute;
+			
+		}
+		.box4{
+			width: 100px;
+			height: 100px;
+			background: rgba(0,0,255,0.5);
+			transform: rotateY(90deg) translateZ(-50px) translateX(-50px);
+			position: absolute;
+			
+		}
+
+		.box5{
+			width: 100px;
+			height: 100px;
+			background: rgba(0,255,255,0.5);
+			transform: rotateX(90deg) translateZ(50px) translateY(50px) ;
+			position: absolute;
+
+		}
+		.box6{
+			width: 100px;
+			height: 100px;
+			background: rgba(50,50,255,0.5);
+			transform: rotateX(-90deg) translateZ(50px) translateY(-50px) ;
+			position: absolute;
+
+
+		}	
+
+	/*	.box7{
+			width: 50px;
+			height: 50px;
+			background: rgba(255,0,0,0.3);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.box8{
+			width: 50px;
+			height: 50px;
+			background: rgba(0,255,0,0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateZ(100px);
+		}
+		.box9{
+			width: 50px;
+			height: 50px;
+			background: rgba(50,160,50,0.5);
+			transform: rotateY(90deg) translateZ(25px)  translateX(-25px);
+			position: absolute;
+			
+		}
+		.box10{
+			width: 50px;
+			height: 50px;
+			background: rgba(0,0,255,0.5);
+			transform: rotateY(90deg) translateZ(-25px) translateX(-25px);
+		
+			position: absolute;
+			
+		}
+
+		.box11{
+			width: 50px;
+			height: 50px;
+			background: rgba(0,255,255,0.5);
+			transform: rotateX(90deg) translateZ(25px) translateY(25px) ;
+			position: absolute;
+
+		}
+		.box12{
+			width: 50px;
+			height: 50px;
+			background: rgba(50,50,255,0.5);
+			transform: rotateX(-90deg) translateZ(50px) translateY(-50px) ;
+			position: absolute;
+
+
+		}	*/
+
+	.wp:hover .box1{
+			width: 100px;
+			height: 100px;
+			background: rgba(255,0,0,0.3);
+			position: absolute;
+			transform: translateZ(-100px);
+			top: 0;
+			left: 0;
+		}
+	.wp:hover	.box2{
+			width: 100px;
+			height: 100px;
+			background: rgba(0,255,0,0.5);
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateZ(200px);
+		}
+	.wp:hover	.box3{
+			width: 100px;
+			height: 100px;
+			background: rgba(50,160,50,0.5);
+			transform: rotateY(90deg) translateZ(150px)  translateX(-50px);
+			position: absolute;
+			
+		}
+	.wp:hover	.box4{
+			width: 100px;
+			height: 100px;
+			background: rgba(0,0,255,0.5);
+			transform: rotateY(90deg) translateZ(-150px) translateX(-50px);
+		
+			position: absolute;
+			
+		}
+
+	.wp:hover	.box5{
+			width: 100px;
+			height: 100px;
+			background: rgba(0,255,255,0.5);
+			transform: rotateX(90deg) translateZ(150px) translateY(50px) ;
+			position: absolute;
+
+		}
+		.wp:hover .box6{
+			width: 100px;
+			height: 100px;
+			background: rgba(50,50,255,0.5);
+			transform: rotateX(-90deg) translateZ(150px) translateY(-50px) ;
+			position: absolute;
+
+
+		}
+		.wp{
+			transform: rotateX(-150deg) rotateY(212deg); 
+			width: 100px;
+			height: 100px;
+			position: relative;
+			/*使被转换的的子元素保留其3d属性*/
+			transform-style: preserve-3d;
+			margin: 300px;
+			/*animation: aa 5s 6 alternate;*/
+		}
+		@-webkit-keyframes aa{
+			
+			100%{
+				transform: rotate(180deg);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wp">
+		<div class="box1"></div>
+	    <div class="box2"></div>		
+    	<div class="box3"></div>
+	    <div class="box4"></div>
+	    <div class="box5"></div>
+	    <div class="box6"></div>
+	    <div class="box7"></div>
+	    <div class="box8"></div>		
+    	<div class="box9"></div>
+	    <div class="box10"></div>
+	    <div class="box11"></div>
+	    <div class="box12"></div>
+    
+    </div>
+   
+	
+</body>
+</html>

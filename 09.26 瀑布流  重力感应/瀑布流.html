@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+		.box{
+			width: 600px;
+			height: 500px;
+			/*background: red;*/
+			margin: auto;
+		}
+
+		ul{
+			list-style: none;
+			overflow: hidden;
+		}
+		ul li{
+			width: 130px;
+			height: 130px;
+			float: left;
+			background: red;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box">
+		<ul id="ul">
+
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	var ul=document.getElementById("ul");
+	CreateLi();
+	function CreateLi(){
+		for (var i = 0; i < 20; i++) {
+			var _li=document.createElement('li');
+			ul.appendChild(_li);
+		}
+		
+	}
+	var _ulheight=ul.clientHeight;
+	window.onscroll=function(){
+		// ul的高度减去窗口的高度得到超出的高度
+		var _height=ul.clientHeight-document.documentElement.clientHeight;
+		//限制无限生成
+		if (document.documentElement.scrollTop<_ulheight*3) {
+			if(document.documentElement.scrollTop>=_height-50){
+			// alert(1);
+			CreateLi();
+			}
+		}
+		
+	}
+</script>
+</html>

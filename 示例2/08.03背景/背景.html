@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 567px;
+			height: 332px;
+			background: url(08.03背景/3.jpg);
+
+			/*background: url(08.03背景/1.png),url(08.03背景/2.png);*/
+
+			/*background: rgba(255,255,0,0.5);*/
+
+			background-repeat: no-repeat;
+			border: 20px dotted;
+
+			/*背景大小 background-size:X Y*/
+			/*background-size: 100% 100%;*/
+			padding:20px;
+
+
+
+			/*相对内容框来定位背景*/
+		/*	border-box边框最外边
+			padding-box内边距最外边
+			content-box内容最外边*/
+			/*background-origin: padding-box;*/
+
+			/*cover拉满最长边*/
+			/*background-size: cover;*/
+			/*拉满最小边*/
+			/*background-size: contain;*/
+
+			/*剪切*/
+			/*background-clip: padding-box;*/
+
+			/*webkit：谷歌 移动端只加谷歌 PC端四个都加*/
+			/*-moz-:火狐;*/
+			/*-o-：欧朋*/
+			/*-ms-:IE;*/
+			/*mask 蒙版*/
+			/*特点：1、显示与形状有关 2、颜色对蒙版没有任何影响 3、显示区域与透明度有关*/
+
+		    -webkit-mask:url(08.03背景/2.png) no-repeat;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	
+</body>
+</html>

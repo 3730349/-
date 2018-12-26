@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.div{
+			position: absolute;
+			/*width: 1000px;*/
+ 			width: 400px;
+/*height: 400px; */
+		}
+
+		.div img{
+			width:100%;
+		}
+
+		.box{
+			width: 10%;
+			height: 10%;
+			position: absolute;
+			left: 10%;
+			top: 10%;
+			background: yellow;
+		
+		}
+	</style>
+</head>
+<body>
+	<div class="div">
+		<img src="btnBg.png">
+		<div class="box"></div>
+	</div>
+</body>
+</html>
+				/*// 第二个倒计时开始可以点击
+				// 喂东西按钮
+				d2_tMu.style.display="block";			
+				
+				var math=Math.floor(Math.random()*4);
+				span_d.innerHTML=tm_arr[math];
+
+				// 给按钮添加事件
+				for (var i = 0; i < fd_btn.length; i++) {
+					fd_btn[i].a=i;
+					fd_btn[i].onclick=function(){
+
+
+					
+						// 正确
+						if (this.a==math) {
+
+							d2_tMu.style.backgroundImage="url('images/game-trueTip.png')";
+							span_d.innerHTML="选择正确,盼盼好好喝";
+							d2_mo.src="images/game-trueMonkey.png";
+							k++;
+							if (k>=3) {
+									clearInterval(time_d);
+									clearInterval(time_s);
+									box5.style.display="block";
+
+							}
+							 time_d=setTimeout(function(){
+							 	
+							 	
+							 	temp[t]=math;
+							 	console.log(temp);
+							 	console.log()
+							 	t++;
+								math=Math.floor(Math.random()*4);
+								console.log(math+"55555555")
+								for (var q = 0; q < temp.length; q++) {
+									if (math==temp[q]) {
+										math=Math.floor(Math.random()*4);
+										console.log(math+"888");
+										q=-1;
+
+									}
+								}
+
+								span_d.innerHTML=tm_arr[math];
+								d2_tMu.style.backgroundImage="url('images/game-dialogBox.png')";
+								d2_mo.src="images/game-monkey.png";
+
+							},600);
+						}else{
+							// 错误
+							d2_tMu.style.backgroundImage="url('images/game-errorTip.png')";
+							span_d.innerHTML="喂！选错啦";
+							d2_mo.src="images/game-errorMonkey.png";
+							var time_d=setTimeout(function(){
+								math=Math.floor(Math.random()*4);
+
+							for (var w = 0; w < temp.length; w++) {
+									if (math==temp[w]) {
+										math=Math.floor(Math.random()*4);
+										w=-1;
+									}
+								}
+								span_d.innerHTML=tm_arr[math];
+								d2_tMu.style.backgroundImage="url('images/game-dialogBox.png')";
+								d2_mo.src="images/game-monkey.png";
+							},600);
+						}
+					}
+				}*/

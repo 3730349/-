@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大图滚动</title>
+</head>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+		
+		.show{
+			width: 600px;
+			overflow: hidden;
+			position: relative;
+			margin: auto;
+			margin-top: 10px;
+		}
+
+		.box{
+			overflow: hidden;
+			width: 999999px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.box img{
+			float: left;
+			width: 200px;
+		}
+
+		.box_left,.box_right{
+			overflow: hidden;
+			float: left;
+		}			
+/* 		.box2_left,.box2_right{
+		overflow: hidden;
+		float: left;
+		left: -1000px;
+	}	 */	
+		
+		.btn {
+			width: 100%;
+			height: 50px;
+			position: absolute;
+			overflow: hidden;
+			top: 150px;
+
+			
+		}
+	
+		#btn_left {
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-left: 30px;
+			background: red;
+
+		}
+		#btn_right {
+			width: 50px;
+			height: 50px;
+			float: right;
+			margin-right: 30px;
+			background: red;
+
+		}
+
+	</style>
+<body>
+
+	<div class="show" id="show">
+		<div class="box" id="box">
+			<!-- <div class="box2_right" id="box2_right"></div> -->
+			<div class="box_left" id="box_left">
+				<img src="image/1.jpg" alt="">
+				<img src="image/2.jpg" alt="">
+				<img src="image/3.jpg" alt="">
+				<img src="image/4.jpg" alt="">
+				<img src="image/5.jpg" alt="">
+			</div>
+			<div class="box_right" id="box_right"></div>
+			
+		</div>
+		
+	</div>
+		
+		<div class="btn"><input type="button" value="Left" id="btn_left"><input type="button" value="right" id="btn_right"></div>
+		
+	
+</body>
+
+
+	<script type="text/javascript">
+		var box=document.getElementById("box");
+		var box_left=document.getElementById("box_left");
+		var box_right=document.getElementById("box_right");
+		var btn_left=document.getElementById("btn_left");
+		var btn_right=document.getElementById("btn_right");
+		var show=document.getElementById("show");
+
+		var _index=0;
+		var left_1, b,right_1,right_2;
+		var f;
+		var bl=true;
+		
+		box_right.innerHTML=box_left.innerHTML;
+		// box2_right.innerHTML=box_left.innerHTML;
+
+		b=setInterval('a(bl)',10);
+
+		function a(bl){
+			if (bl) {
+				_index+=1;
+
+				if (_index>=1000) {
+				_index=0;
+				}
+			}else{
+				_index-=1;
+
+				if (_index<=0) {
+				_index=1000;
+				}
+			}
+
+			box.style.left=-_index+"px";
+
+		if (_index%200==0) {
+			clearInterval(b);
+			left_1=setTimeout(function(){
+				b=setInterval('a(bl)',10);
+		}
+,300);
+		  }
+
+		}
+
+
+		
+		/*function c(){
+			b=setInterval(a,10);
+		}
+*/
+/*		function right(){
+			 f=1;
+			_index-=1;
+			if (_index<=0) {
+				_index=1000;
+			}
+			box.style.left=-_index+"px";
+
+			if (_index%200==0) {
+			clearInterval(right_1);
+			right_2=setTimeout(function(){
+				right_1=setInterval(right,10);
+		},300);
+		  }
+
+		}*/
+/*		function right_2(){
+			right_1=setInterval(right,10);
+		}
+*/	
+	//鼠标进入停止
+	show.onmouseover=function(){
+			clearInterval(b);
+			clearInterval(left_1);
+			clearInterval(right_1);
+			clearInterval(right_2);
+	}
+	//移入继续
+	show.onmouseout=function(){
+		if (f==0) {
+			b=setInterval(a,10);
+		}
+		if (f==1){
+			right_1=setInterval(right,10);
+		}
+	}
+		//点击向左移
+		btn_left.onclick=function(){
+			
+			clearInterval(b);
+			clearInterval(left_1);
+			bl=true;
+			b=setInterval('a(bl)',10);
+
+			
+		}
+		//点击向右移
+		btn_right.onclick=function(){
+			clearInterval(b);
+			clearInterval(left_1);
+			bl=false;
+			b=setInterval('a(bl)',10);
+	
+}
+
+		
+
+
+
+
+
+/*		var _index=0;
+		//拷贝图片
+		box_right.innerHTML=box_left.innerHTML;
+		setInterval(function(){
+			_index+=2;
+
+
+			if (_index>=1000) {
+				_index=0;
+			}
+			box.style.left=-_index+"px";
+
+
+
+		},10);*/
+	
+
+
+	</script>
+</html>

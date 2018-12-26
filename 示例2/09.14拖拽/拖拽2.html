@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		input{
+			position: absolute;
+			width: 100px;
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="box"></div>
+	<input type="button" id="btn">
+</body>
+<script type="text/javascript">
+	var _box=document.getElementById("box");
+	var _btn=document.getElementById("btn");
+	var a=[];
+	var b=[];
+	 a[0]=0;
+	 b[0]=0;
+	var j=1;
+	var ofX;
+	var ofY;
+	var n1;
+	var n2;
+	var _X;
+	var _Y;
+	_box.onmousedown=function(e){
+		 ofX=e.offsetX;
+		 ofY=e.offsetY;
+		 n1=window.innerWidth;
+		 n2=window.innerHeight;
+		document.onmousemove=function(e){
+			_X=e.clientX-ofX;
+		    _Y=e.clientY-ofY;
+		    test(_X,_Y);
+			a[j]=_X;
+			b[j]=_Y;
+			j++;		
+			_box.style.left=_X+"px";
+			_box.style.top=_Y+"px";
+		}
+	}
+	function test(_X,_Y){
+		    if (_X<=0) {
+				_X=0;
+			}
+			if (_Y<=0) {
+				_Y=0;
+			}
+			if (_X>=n1-_box.offsetWidth) {
+				_X=n1-_box.offsetWidth;
+			
+			}			
+			if (_Y>=n2-_box.offsetHeight) {
+				_Y=n2-_box.offsetHeight;
+
+			}	
+	}
+
+	document.onmouseup=function(){
+
+			document.onmousemove=null;
+	};
+	// 点击原路返回
+	btn.onclick=function(){
+		
+		var time=setInterval(function(){
+			test(a[a.length-1],b[a.length-1]);
+
+			_box.style.left=a[a.length-1]+"px";
+			_box.style.top=b[a.length-1]+"px";
+			a.length--;
+			if (a.length<=0) {
+				clearInterval(time);
+				a.length=0;
+				b.length=0;
+				a[0]=0;
+	 			b[0]=0;
+				j=1;
+			}
+
+		},10);
+
+	}
+
+
+</script>
+</html>

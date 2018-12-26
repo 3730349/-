@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=320,user-scalable=no,target-densitydpi=device-dpi" name="viewport" id="viewport">
+	<title>重力感应</title>
+	<style type="text/css">
+		div{height: 100px;width: 100px;background: #ccc;}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var oDiv=document.getElementById("div1");
+		window.addEventListener("deviceorientation",function(e){
+			// 围绕Z轴旋转时改变
+			// oDiv.innerHTML=e.alpha;
+			// 围绕X轴旋转时改变
+			// oDiv.innerHTML=e.beta;
+			// 围绕y轴旋转时改变
+			oDiv.innerHTML=e.gamma;
+		},false)
+	}
+	</script>
+</head>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.ul{
+			width: 100px;
+			background: pink;
+			list-style: none;
+			position: absolute;
+			display: none;
+			
+		}
+		 .ul li{
+			margin-left: 0;
+			text-align: center;
+			border-bottom: 1px solid black;
+
+		} 
+	</style>
+
+</head>
+<body>
+	<ul class="ul" id="ul">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var _ul=document.getElementById("ul");
+
+	document.oncontextmenu=function(e){
+		var e=window.event||e;
+		//禁止默认事件
+		e.preventDefault();
+		
+		//鼠标坐标
+		var x=e.clientX;
+		var y=e.clientY;
+		_ul.style.display="block";
+		// 浏览器的高度
+		var w=window.innerHeight;
+		//如果鼠标的x和y都大于浏览器的宽度或高度减去ul的宽度或高度
+		if (x>document.body.offsetWidth-_ul.offsetWidth&&y>window.innerHeight-_ul.offsetHeight) {
+			_ul.style.top=w-_ul.offsetHeight+"px";
+			_ul.style.left=document.body.offsetWidth-_ul.offsetWidth+"px";
+		}else if (x>document.body.offsetWidth-_ul.offsetWidth) {
+			//如果鼠标的x大于浏览器的宽度减去ul的宽度
+			_ul.style.left=document.body.offsetWidth-_ul.offsetWidth+"px";
+			_ul.style.top=y+"px";
+		}else if(y>window.innerHeight-_ul.offsetHeight) {
+			//如果鼠标的y大于浏览器的高度减去ul的高度
+			_ul.style.top=w-_ul.offsetHeight+"px";
+			_ul.style.left=x+"px";
+		}else{
+			//否则正常显示
+			_ul.style.left=x+"px";
+			_ul.style.top=y+"px";
+		}
+
+	}
+
+	//点击退出
+	document.onclick=function(){
+		_ul.style.display="none";
+
+	}
+
+
+	
+</script>
+</html>

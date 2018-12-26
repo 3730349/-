@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间对象</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	var _time=new Date();
+	// console.log(_time.getDate());
+/*	//日(一个月的第几天)
+	var data=_time.getDate();
+	//周（一周的第几天）
+	var week=_time.getDay();
+	//月（）
+	var month=_time.getMonth()+1;
+	//年
+	var year=_time.getFullYear();
+	//时
+	var _h=_time.getHours();
+	//分
+	var _m=_time.getMinutes();
+	// 秒
+	var _s=_time.getSeconds();
+	// 毫秒数
+	var _mm=_time.getMilliseconds();
+	*/
+
+	// 距离1970年1月1日0时0分0秒距离该日期的毫秒数
+	var _T=_time.getTime();
+	//修改日期
+	//把get改成set
+	// _time.setDate(1);
+	// console.log(_time);
+	// 修改日期，设置为国庆日期
+	var time2 =new Date();
+
+	time2.setMonth(9);
+	time2.setDate(1);
+	time2.setHours(0);
+	time2.setMinutes(0);
+	time2.setSeconds(0);
+	time2.setMilliseconds(0);
+	// console.log(time2.getFullYear());
+	// 精确到毫秒,国庆距离今日的毫秒数
+	var s=time2.getTime()-_T;
+	var s2=new Date(s);
+	time2.setTime(s);
+	var s_d=time2.getDate();
+	var s_mo=time2.getMonth();
+	var s_h=time2.getHours();
+	var s_m=time2.getMinutes();
+	var s_s=time2.getSeconds();
+	console.log("距离国庆还有"+s_mo+"月"+s_d+"日"+s_h+"小时"+s_m+"分"+s_s+"秒");
+	// console.log(s.getFullYear());
+
+
+	// console.log(time2);
+	// var c_month=time2.getMonth();
+	// var s_month=c_month-month;
+	// var c_date=time2.getDate();
+	// var s_date=29+c_date-data;
+	// var c_hours=time2.getHours();
+	// var s_hours=24+c_hours-_h;
+	// var c_s=time2.getSeconds();
+	// var s_s=60+c_s-_s;
+	// var c_m=time2.getMonth()
+	// var s_m=60+c_m-_m;
+	// // var c_date=-date;
+	// console.log("距离国庆还有"+s_month+"月"+s_date+"日"+s_hours+"小时"+s_m+"分"+s_s+"秒");
+
+
+</script>
+<ml>

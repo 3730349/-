@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab切换练习</title>
+	<link rel="stylesheet" type="text/css" href="tab.css">
+</head>
+<body>
+	<div class="box">
+		<div class="show" id="show">
+					<!-- 第1张图片 -->
+		<div class="i1" >
+			<div class="img i1_1"></div>
+			<div class="i12">
+				<img src="img/images/201302040916387940.jpg">
+				<img src="img/images/201302040917051007.jpg">
+				<img src="img/images/201302040917543303.jpg">
+			</div>
+			
+		</div>	
+		<!-- 第2张图片 -->	
+		<div class="i2" >
+			<div class="img i1_2"></div>
+			<div class="i12">
+				<img src="img/images/201302040923225444.jpg">
+				<img src="img/images/201302040923589465.jpg">
+				<img src="img/images/201302040924331641.jpg">
+			</div>
+		</div>	
+		<!-- 第3张图片 -->	
+		<div class="i3" >
+			<div class="img i1_3"></div>
+			<div class="i12">
+				<img src="img/images/201302040921165120.jpg">
+				<img src="img/images/201302040922483037.jpg">
+				<img src="img/images/201302040924046527.jpg">
+			</div>
+		</div>	
+		<!-- 第4张图片 -->	
+		<div class="i4" >
+			<div class="img i1_4"></div>
+			<div class="i12">
+				<img src="img/images/201302040923257447.jpg">
+				<img src="img/images/201302040923589465.jpg">
+				<img src="img/images/201302040925056122.jpg">
+			</div>
+		</div>	
+		<!-- 第5张图片 -->	
+		<div class="i5" >
+			<div class="img i1_5"></div>
+			<div class="i12">
+				<img src="img/images/201302040923177095.jpg">
+				<img src="img/images/201302040924411894.jpg">
+				<img src="img/images/201302040926316237.jpg">
+			</div>
+		</div>	
+		<!-- 第6张图片 -->	
+		<div class="i6" >
+			<div class="img i1_6"></div>
+			<div class="i12">
+				<img src="img/images/2013020409195591101.jpg">
+				<img src="img/images/2013020409203782111.jpg">
+				<img src="img/images/201302040921086470.jpg">
+			</div>
+		</div>
+		</div>
+
+
+		<!-- 底部按钮 -->
+		<div class="bot" id="btn">
+			<span id="btn1">大美在人间</span>
+			<span id="btn2">食色性也</span>
+			<span id="btn3">小确幸轻熟女</span>
+			<span id="btn4">居家慢生活</span>
+			<span id="btn5">岁岁平安</span>
+			<span id="btn6">潮男速成计划</span>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+
+	var show=document.getElementById("show");
+	var bt=document.getElementById("btn");
+	var btn=bt.getElementsByTagName("span");
+	btn[0].style.background="#4EC5EF";
+
+	var s;
+	var _index=1;
+
+	function BtnRo(){
+		for (var i = 0; i < btn.length; i++) {
+				btn[i].style.background="";
+			}	
+		}
+	for (var i = 0; i < btn.length; i++) {
+		btn[i].a=i;
+		btn[i].onclick=function(){
+			BtnRo();
+			this.style.background="#4EC5EF";
+			show.style.left=(this.a)*(-600)+"px";
+
+			_index=this.a+1;
+
+			
+		}
+	}
+	
+	function a(){
+
+		BtnRo()
+
+		btn[_index].style.background="#4EC5EF";
+		show.style.left=-_index*600+"px";
+		_index++;
+		
+
+		if (_index>=btn.length) {
+			_index=0;
+		}
+	}
+//开始就加载此方法
+	window.onload=function(){
+		s=setInterval(a,1000);
+	}
+//鼠标移入后清除延时
+	bt.onmouseover=function(){
+		clearInterval(s);
+		
+	}
+//移除后继续延迟	
+	bt.onmouseout=function(){
+		s=setInterval(a,1000);
+	}
+
+
+
+
+
+
+
+
+/*	//获取按钮Id
+	var btn1=document.getElementById("btn1");
+	var btn2=document.getElementById("btn2");
+	var btn3=document.getElementById("btn3");
+	var btn4=document.getElementById("btn4");
+	var btn5=document.getElementById("btn5");
+	var btn6=document.getElementById("btn6");
+	//获取图片
+	var i1=document.getElementsByClassName("i1")[0];
+	var i2=document.getElementsByClassName("i2")[0];
+	var i3=document.getElementsByClassName("i3")[0];
+	var i4=document.getElementsByClassName("i4")[0];
+	var i5=document.getElementsByClassName("i5")[0];
+	var i6=document.getElementsByClassName("i6")[0];
+
+
+	var show=document.getElementsByClassName("show")[0];
+
+	//给每个按钮添加事件
+	btn1.onclick=function(){
+		a();
+		btn1.style.background="#4EC5EF";
+		show.style.marginLeft="0";
+		show.style.transition = 'all 1s';
+	}	
+	btn2.onclick=function(){
+		a();
+		btn2.style.background="#4EC5EF";
+		show.style.marginLeft="-600px";
+		show.style.transition = 'all 1s';
+
+	}	
+	btn3.onclick=function(){
+		a();
+		btn3.style.background="#4EC5EF";
+		show.style.marginLeft="-1200px";
+		show.style.transition = 'all 1s';
+
+	}	
+	btn4.onclick=function(){
+		a();
+		btn4.style.background="#4EC5EF";
+		show.style.marginLeft="-1800px";
+		show.style.transition = 'all 1s';
+	}	
+	btn5.onclick=function(){
+		a();
+		btn5.style.background="#4EC5EF";
+		show.style.marginLeft="-2400px";
+		show.style.transition = 'all 1s';
+	}	
+	btn6.onclick=function(){
+		a();
+		btn6.style.background="#4EC5EF";
+		show.style.marginLeft="-3000px";
+		show.style.transition = 'all 1s';
+	}
+
+
+	function a() {
+		// i1.style.display="none";
+		// i2.style.display="none";
+		// i3.style.display="none";
+		// i4.style.display="none";
+		// i5.style.display="none";
+		// i6.style.display="none";
+
+		btn1.style.background="";
+		btn2.style.background="";
+		btn3.style.background="";
+		btn4.style.background="";
+		btn5.style.background="";
+		btn6.style.background="";
+	}
+*/
+
+</script>
+</html>

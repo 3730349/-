@@ -1,0 +1,271 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.ma{
+	width: 390px;
+	position: absolute;
+	top: 100px;
+}
+.lon{
+	position: absolute;
+	width: 640px;
+	height: 1136px;
+	/*overflow: hidden;*/
+}
+#span{
+	width: 640px;
+	position: absolute;
+	top:600px; 
+	text-align: center;
+	font-size: 1.5em;
+	color: white;
+}
+.box{
+	position: relative;
+	width: 640px;
+	height: 1136px;
+	overflow: hidden;
+	display: none;
+}
+.box1,.box2{
+	position: absolute;
+	width: 640px;
+	height: 1136px;
+}
+.bg{
+	position: absolute;
+	width: 100%;
+
+}
+.mar{
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.chiwei{
+	position: absolute;
+	top: 10px;
+}
+/*帧图*/
+.scene{
+  	width: 640px;
+ 	height: 672px;  
+	position: absolute;
+	top: 130px;
+}
+.scene img{
+	position: absolute;
+	height: 540px;
+}
+.starttitle_03{
+	width: 480px;
+	/*height: 290px;*/
+	position: absolute;
+	top: 680px;
+	animation:starttitle 1s  infinite alternate;
+	
+}
+@-webkit-keyframes starttitle{
+	
+	100%{
+		top: 674px;
+	}
+
+}
+/*开始抽牌*/
+#box1_start{
+	height: 80px;
+	position: absolute;
+	top: 974px;
+}
+
+
+/*2*/
+.box2{
+	display: none;
+}
+#cards{
+	width: 350px;
+	position: absolute;
+	top: 200px;
+}
+.cards{
+	animation:cards 1.5s;
+}
+@-webkit-keyframes cards{
+	
+	100%{
+		transform: scale(0.3);
+
+	}
+
+}
+#box2_start{
+	width: 300px;
+	position: absolute;
+	top: 870px;
+}
+#acard{
+	width: 640px;
+	height: 256px;
+	position: absolute;
+	top: 314px;
+	display: none;
+
+}
+#acard img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transition: all 0.5s;
+	/*transform-origin: : */
+	/*transform: sc*/
+}
+
+/*手指*/
+.box2_3{
+	position: absolute;
+	width: 640px;
+	height: 400px;
+	bottom: 50px;
+
+
+}
+#box2_31{
+	position: absolute;
+	top: 50px;
+	display: none;
+}
+#box2_32{
+	position: absolute;
+	top: 280px;
+	display: none;
+	/*transition: all 2s;*/
+}
+/*抽牌结束动画*/
+.paiDh{
+	animation: scaPai 1s;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes scaPai{
+	100%{
+		opacity: 0;
+		transform: scale(2) rotateY(180deg);
+
+	}
+
+}
+@-webkit-keyframes rotPai{
+
+	100%{
+		
+		transform: rotateY(180deg);
+
+	}
+
+}
+
+/*抽奖结果*/
+.endcard{
+	width: 640px;
+	height: 900px;
+	position: absolute;
+	top: 200px;
+	display: none;
+}
+.endcard img{
+	position: absolute;
+}
+.endcard_1{
+	width: 400px;
+	/*height: 600px;*/
+	top: 0;
+}
+#endcard_2{
+	width: 300px;
+	bottom: 80px;
+}
+#endcard_3{
+	width: 550px;
+	top: -600px;
+	animation:hua 1s; 
+	animation-fill-mode: forwards;
+}
+/*花动画*/
+@-webkit-keyframes hua{
+
+	100%{
+		top: -55px;
+	}
+
+}
+/*3*/
+#box3{
+	position: absolute;
+	width: 640px;
+	height: 1136px;
+	display: none;
+}
+#box3 img{
+	position: absolute;
+}
+.box3_1{
+	width: 550px;
+	top: 50px;
+}
+.box3_bq{
+	width: 560px;
+	height: 225px;
+	position: absolute;
+	top: 626px;
+	overflow: hidden;
+}
+#box3_2{
+	width: 500px;
+	top: 0px;
+	right: -700px;
+ 	animation:bqian 1s; 
+	animation-fill-mode: forwards;
+ 
+}
+/*标签动画*/
+@-webkit-keyframes bqian{
+
+	100%{
+		right: 65px;
+	}
+
+}
+/*轴*/
+.box3_3{
+    width: 60px;
+    top: 601px;
+    right: 46px;
+}
+#box3_4{
+    top: 950px;
+    width: 245px;
+    left: 50px;
+}
+#box3_5{
+    top: 950px;
+    width: 245px;
+	right: 50px;
+}
+
+.box4{
+	position: absolute;
+	width: 640px;
+	height: 1136px;
+	background: rgba(0,0,0,0.3);
+	display: none;
+}
+.box4 img{
+	position: absolute;
+	width: 640px;
+	height: 1136px;
+}

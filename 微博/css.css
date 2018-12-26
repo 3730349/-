@@ -1,0 +1,166 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.msgBox{
+	border:1px solid;
+	width: 500px;
+	margin: 10px auto;
+}
+body{
+	background: url(img/boxBG.jpg);
+	font-size: 12px;
+}
+.sendArea{
+
+	background: url(img/boxBG.jpg);
+	padding: 15px 20px;
+}
+.baba{
+	position: relative;
+	overflow: hidden;
+}
+.userName{
+	width: 170px;	
+	height: 35px;
+	border-radius: 5px;
+/*	position: absolute;
+	left: 0;*/
+}
+.face{
+		position: absolute;
+		left: 190px;
+		top: 0;
+}
+.face img{
+	/*position: absolute;*/
+	left: 5px;
+	margin-left: 5px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;	
+
+
+}
+.face img:hover{
+		border: 1px solid red;
+	opacity: 0.5;
+	cursor: pointer;
+}
+.newFace{
+	border: 1px solid red;
+	opacity: 0.5;
+
+}
+.conBox{
+	height: 65px;
+	width: 450px;
+	margin-top: 10px;
+	border-radius: 5px;
+	resize: none;	
+	/*margin: 10px 20px;*/
+}
+
+.a1_3{
+	height: 45px;
+	position: relative;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.a1_31{
+	position: absolute;
+	left: 150px;
+	top: 10px;
+	font-size: 16px;
+}
+.a1_32{
+	width: 112px;
+	height: 30px;
+	position: absolute;
+	left: 335px;
+	top: 5px;
+	background-image: url("img/btn.png");
+	/*font-size: 16px;*/
+}
+.a1_32:hover{
+	background-position: 0 -30px;
+}
+#num{
+	font-family: "Georgia";
+	font-size: 24px;
+
+}
+.b{
+	/*width: 450px;	*/
+	padding: 10px;
+	background: white;
+	/*margin-top: 10px;*/
+}
+.b1{
+	height: 30px;
+	background: pink;
+	position: relative;
+	overflow: hidden;
+
+}
+.b1_1{
+		position: absolute;
+		left: 6px;
+		top: 8px;
+		padding: 0 5px;
+		font-size: 16px;
+		background: #e3eaec;
+}
+#ul{
+	list-style: none;
+	overflow: hidden;
+}
+li{
+	list-style: none;
+	float: left;
+	padding: 10px 0;
+	border-bottom: 1px dashed #d8d8d8;
+
+}
+
+.userPic{
+	float: left;
+	margin-left: 5px;
+	margin-top: 3px;
+	border-radius:50% ;
+}
+.userPic img{
+
+	border-radius:50% ;
+}
+.content{
+	float: left;
+	width: 420px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+.usName,.msgInfo{
+	display: inline;
+
+}
+.msgInfo{
+	width: 300px;
+	word-wrap: break-word;
+}
+a{
+text-decoration: none;
+color: #777;
+
+}
+a:hover{
+	text-decoration: underline;
+}
+.time{
+	margin-top: 8px;
+	overflow: hidden;
+}
+.del{
+	float: right;
+	display: none;
+	color: #777;
+}

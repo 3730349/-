@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=640,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="xn.css">
+</head>
+<body>
+	<div class="box" id="box">
+		<!-- <img src="img/bg.jpg" class="bg"> -->
+		<div class="bg"></div>
+		
+		<img src="img/start.jpg" class="start" id="start">
+		<div class="pipe1_1" id="p1">
+<!-- 		    <div class="pipe2" >
+		   		   				<img src="img/down_pipe.png" class="downpipe">
+		   		   				<img src="img/up_pipe.png" class="uppipe">
+		   		   </div>		    
+		   		   <div class="pipe2" >
+		   		   				<img src="img/down_pipe.png" class="downpipe">
+		   		   				<img src="img/up_pipe.png" class="uppipe">
+		   		   </div> -->		   
+		</div>		
+		<div class="pipe1_2" id="p2">
+<!--     		<div class="pipe2" >
+	   	   				<img src="img/down_pipe.png" class="downpipe">
+	   	   				<img src="img/up_pipe.png" class="uppipe">
+	   	   </div>		    
+	   	   <div class="pipe2" >
+	   	   				<img src="img/down_pipe.png" class="downpipe">
+	   	   				<img src="img/up_pipe.png" class="uppipe">
+	   	           	</div>	 -->	   
+		</div>
+	<img src="img/bird0.png" class="bird" id="bird">
+	<div class="num" id="num">
+		<img src="img/0.jpg" id="img2">
+		<img src="img/0.jpg" id="img1">
+	</div>
+	<div class="score" id="score">
+		<img src="img/game_over.jpg" class="ov">
+		<img src="img/message.jpg" class="mes">
+		<!-- <img src="img/0.jpg" class="sco"> -->
+	</div>
+	<div class="sco" id="sco">2</div>
+	</div>
+</body>
+<script type="text/javascript">
+	var box=document.getElementById("box");
+	var bird=document.getElementById("bird");
+	var start=document.getElementById("start");
+	var p1=document.getElementById("p1");
+	var p2=document.getElementById("p2");
+	var num=document.getElementById("num");
+	var score=document.getElementById("score");
+	var img1=document.getElementById("img1");
+	var img2=document.getElementById("img2");
+	var sco=document.getElementById("sco");
+	var time1;
+	var a=80;
+	var timeout1;
+	var _div1_1;
+	var _img1_1;
+	var _img1_2;
+	var _div1_2;
+	var _img2_1;
+	var _img2_2;
+	var _div2_1;
+	var _img3_1;
+	var _img3_2;
+	var _div2_2;
+	var _img4_1;
+	var _img4_2;
+
+	var bl=false;
+	var j=1;
+	var k=1;
+	// console.log(bird.offsetTop);
+	function sta(){
+		    bird.src='img/down_bird0.png';
+			bird.style.top=bird.offsetTop+10+"px";
+			if (bird.offsetTop+bird.offsetHeight>=1000) {
+					clearInterval(time1);
+					// console.log(88)
+					sco.innerHTML=num.innerHTML;
+					num.style.display="none";
+					score.style.display="block";
+					sco.style.display="block";
+
+
+
+			}
+		}
+
+	function cre2(){
+			// var dow1=Math.floor(Math.random()*250+200);
+			var dow1=Math.floor(Math.random()*350+100);
+			var up1=600-dow1;
+			// var dow2=Math.floor(Math.random()*180+270);
+			var dow2=Math.floor(Math.random()*250+200);
+			var up2=600-dow2;
+			// console.log(dow1);
+			// console.log(up1);
+
+		     _div1_1=document.createElement('div');
+			 _img1_1=document.createElement('img');
+			 _img1_2=document.createElement('img');
+
+			_div1_1.className='pipe2';
+			_img1_1.style.height=dow1+"px";
+			// _img1_1.style.width=150+"px";
+			_img1_2.style.height=up1+"px";
+			// _img1_2.style.width=150+"px";
+			_img1_1.src='img/up_pipe.png';
+			_img1_2.src='img/down_pipe.png';
+
+			_img1_1.className='uppipe';
+			_img1_2.className='downpipe';
+
+
+			p1.appendChild(_div1_1);
+			_div1_1.appendChild(_img1_1);
+			_div1_1.appendChild(_img1_2);
+
+			 _div1_2=document.createElement('div');
+			 _img2_1=document.createElement('img');
+			 _img2_2=document.createElement('img');
+			_div1_2.className='pipe2';
+			_img2_1.style.height=dow2+"px";
+			// _img2_1.style.width=150+"px";
+			_img2_2.style.height=up2+"px";
+			// _img2_2.style.width=150+"px";
+			_img2_1.className='uppipe';
+			_img2_2.className='downpipe';
+			_img2_1.src='img/up_pipe.png';
+			_img2_2.src='img/down_pipe.png';
+
+			p1.appendChild(_div1_2);
+			_div1_2.appendChild(_img2_1);
+			_div1_2.appendChild(_img2_2);
+	}	
+	function cre3(){
+				// var dow1=Math.floor(Math.random()*220+230);
+				var dow1=Math.floor(Math.random()*350+100);
+			    var up1=600-dow1;
+			    // var dow2=Math.floor(Math.random()*300+150);
+			    var dow2=Math.floor(Math.random()*300+150);
+			    var up2=600-dow2;
+
+
+			 _div2_1=document.createElement('div');
+			 _img3_1=document.createElement('img');
+			 _img3_2=document.createElement('img');
+			_div2_1.className='pipe2';
+			_img3_1.style.height=dow1+"px";
+			// _img3_1.style.width=150+"px";
+			_img3_2.style.height=up1+"px";
+			// _img3_2.style.width=150+"px";
+			_img3_1.className='uppipe';
+			_img3_2.className='downpipe';
+			_img3_1.src='img/up_pipe.png';
+			_img3_2.src='img/down_pipe.png';
+			p2.appendChild(_div2_1);
+			_div2_1.appendChild(_img3_1);
+			_div2_1.appendChild(_img3_2);			
+
+			 _div2_2=document.createElement('div');
+			 _img4_1=document.createElement('img');
+			 _img4_2=document.createElement('img');
+			_div2_2.className='pipe2';
+			_img4_1.style.height=dow2+"px";
+			// _img4_1.style.width=150+"px";
+			_img4_2.style.height=up2+"px";
+			// _img4_2.style.width=150+"px";
+			_img4_1.className='uppipe';
+			_img4_2.className='downpipe';
+			_img4_1.src='img/up_pipe.png';
+			_img4_2.src='img/down_pipe.png';
+			p2.appendChild(_div2_2);
+			_div2_2.appendChild(_img4_1);
+			_div2_2.appendChild(_img4_2);
+	}
+	function cre(){
+/*				var dow1=Math.random()*500;
+			    var up1=Math.random()*500;
+			    var dow2=Math.random()*500;
+			    var up2=Math.random()*500;*/
+
+		// setInterval(function(){
+			cre2();
+			cre3();
+
+
+			
+		// },1000);
+
+	}
+	function pipe(){
+
+		var rig1=640;
+		var rig2=1280;
+		var yd=setInterval(function(){
+			p1.style.right=-rig1+"px";
+			p2.style.right=-rig2+"px";
+			rig1-=1;
+			rig2-=1;
+			// console.log(bird.offsetTop);
+			if (p1.offsetLeft==-120||p1.offsetLeft==-440||p2.offsetLeft==-120||p2.offsetLeft==-440) {
+				img1.src='img/'+j+'.jpg';
+				if (j==0) {
+					img2.src="img/"+k+".jpg";
+					k++;
+				}
+				j++;
+				if (j==10) {
+					j=0;
+				}
+			}
+			if (p1.offsetLeft<=50&&p1.offsetLeft>=-120) {
+				if (bird.offsetTop<=_img1_1.offsetHeight||bird.offsetTop+bird.offsetHeight>=_img1_2.offsetTop) {
+					// bird.style.Top=_img1_1.offsetHeight;
+					clearInterval(yd);
+					clearInterval(time1);
+					clearTimeout(timeout1);
+					bl=false;
+					time1=setInterval(sta,15);
+
+				}
+			}			
+
+			if (p1.offsetLeft<=-270&&p1.offsetLeft>=-440) {
+				if (bird.offsetTop<=_img2_1.clientHeight||bird.offsetTop+bird.offsetHeight>=_img2_2.offsetTop) {
+					clearInterval(yd);
+					clearInterval(time1);
+					clearTimeout(timeout1);
+					bl=false;
+					time1=setInterval(sta,15);
+
+				}
+			}
+
+			if ((p2.offsetLeft)<=50&&p2.offsetLeft>=-120) {
+				if (bird.offsetTop<=_img3_1.clientHeight||bird.offsetTop+bird.offsetHeight>=_img3_2.offsetTop) {
+					clearInterval(yd);
+					clearInterval(time1);
+					clearTimeout(timeout1);
+					bl=false;
+					time1=setInterval(sta,15);
+
+				}
+			}			
+			if ((p2.offsetLeft)<=-270&&p2.offsetLeft>=-440) {
+				if (bird.offsetTop<=_img4_1.clientHeight||bird.offsetTop+bird.offsetHeight>=_img4_2.offsetTop) {
+					clearInterval(yd);
+					clearInterval(time1);
+					clearTimeout(timeout1);
+					bl=false;
+					time1=setInterval(sta,15);
+
+				}
+			}
+
+			if (rig1==-640) {
+				rig1=640;
+				p1.removeChild(_div1_1);
+				p1.removeChild(_div1_2);					        
+/*				var dow=Math.random()*500;
+			    var up=Math.random()*500;
+			    console.log(dow);
+*/				cre2();
+   				console.log(1);
+
+			}			
+			if (rig2==-640) {
+				rig2=640;
+			    p2.removeChild(_div2_1);
+				p2.removeChild(_div2_2);
+/*				var dow=Math.random()*500;
+			    var up=Math.random()*500;*/
+				cre3();
+				console.log(2);
+			}
+		},2);
+
+
+	}
+
+	start.onclick=function(e){
+		bl=true;
+		start.style.display="none";
+		var e=window.event||e;
+		// 阻止事件流
+		e.stopPropagation();
+		pipe();
+
+		cre();
+		time1=setInterval(sta,50);
+	    
+	}
+
+	function docClick(){
+			if (bl) {
+			clearInterval(time1);
+		    clearTimeout(timeout1);
+		
+		    bird.src='img/up_bird0.png';
+			bird.style.top=bird.offsetTop-a+"px";
+			timeout1=setTimeout(function(){
+				time1=setInterval(sta,50);
+			},160);
+
+			}
+		    	
+	}
+	document.addEventListener("click",docClick);
+
+	
+</script>
+</html>

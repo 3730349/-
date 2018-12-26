@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>s6北汽项目-api</title>
+<style type="text/css">
+#container {
+	line-height: 160%;
+}
+.nav {
+	border-bottom: 1px solid #ccc;
+	height: 32px;
+	_height: 31px;
+	_padding: 0 0 0 30px;
+}
+.nav li {
+	float: left;
+	list-style: none;
+	position: relative;
+	bottom: -2px;
+}
+.nav li a {
+	float: left;
+	display: block;
+	color: #0000aa;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	background: #ddd;
+	text-decoration: none;
+}
+.nav li.active a {
+	border-bottom: none;
+	background: #f3f3f3;
+	color: #000;
+}
+xmp {
+	padding: 0;
+	margin: 0;
+	border: 1px dashed #ccc;
+	background: #fff;
+}
+.box em {
+	font-style: normal;
+	color: red;
+	font-weight: bold;
+}
+</style>
+<script type="text/javascript" src="jquery-1.8.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+  $('.nav a').each(function(i){
+    $(this).click(function(){
+      $('.nav li').removeClass('active');
+      $('.nav li').eq(i).addClass('active');
+      $(this).blur();
+      $('.box').hide();
+
+      $('#list' + (i + 1) ).show();
+    })
+  })
+
+	$('.box').hide();
+	$('#list1').show();
+  
+})
+</script>
+</head>
+
+<body style="font-family: verdana; font-size: 12px;  background: #f3f3f3;">
+<h1>s6北汽项目-api</h1>
+<div id="container">
+<ul class="nav">
+    <li class="active"><a href="#" >s6北汽项目-api</a></li>
+
+ 
+</ul>
+<div class="box" id="list1" >
+    
+
+<!--     <h2>1.1.北汽武林秘籍留资接口</h2>
+    <ul>
+        <li>调用地址：</li>
+        <li>请求方式：</li>
+        <li>参数：
+            <ul>
+                <li>username:姓名</li>
+				<li>mobile:手机号</li>
+				<li>province:省份</li>
+				<li>city:城市</li>
+				<li>type:机型选择</li>
+
+            </ul>
+        </li>
+        <li> 返回结果
+            <pre>   
+{
+"status":true or false,
+"info":"提交成功"
+}
+            </pre>
+        </li>
+    </ul> -->
+
+    <h2>1.2.s6春节专题获取验证码接口</h2>
+    <ul>
+        <li>调用地址：http://wechat.palm-h.com/h5/s6/cms/index.php/Home/index/vety
+        </li>
+        <li>请求方式：&ltimg src="http://wechat.palm-h.com/h5/s6/cms/index.php/Home/index/vety"&gt</li>
+        <li>参数：
+			
+        </li>
+        <li> 返回结果
+            <pre>   
+<img src="http://wechat.palm-h.com/h5/s6/cms/index.php/Home/index/vety">
+            </pre>
+
+    </ul>
+	
+	 <h2>1.3.s6春节专题填写资料接口</h2>
+    <ul>
+        <li>调用地址：http://wechat.palm-h.com/h5/s6/cms/index.php/Home/index/s6_data
+        </li>
+        <li>请求方式：</li>
+        <li>参数：
+			<ul>
+                <li>username:姓名</li>
+                <li>sex:性别</li>
+                <li>mobile:手机号</li>
+                <li>verifyMsg:验证码</li>
+                <li>city:城市</li>
+                <li>area:地区</li>
+                <li>address:详细地址</li>
+			</ul>
+        </li>
+        <li> 返回结果
+            <pre>   
+{
+    "status": true or false,
+    "info": "提交成功",
+    "uid":抽奖标识（存到cookie，抽过后就不能中奖了）(数据库id号码)
+}
+            </pre>
+
+    </ul>
+	
+	<h2>1.4.s6春节专题抽奖接口</h2>
+    <ul>
+        <li>调用地址：
+        </li>http://wechat.palm-h.com/h5/s6/cms/index.php/Home/index/price
+        <li>请求方式：</li>
+        <li>参数：
+			<ul>
+				<li>uid:uid</li>
+            </ul>
+        </li>
+        <li> 返回结果
+            <pre>   
+{
+    "status": true or false,
+    "price": 奖品类型（0-3）,//0:iphone6s(3台);1:iwatch(5份);2:京东券(100份);3:公仔(500份);
+    "name":奖品名字
+}
+            </pre>
+
+    </ul>
+	
+	
+	<h2>1.5.s6春节专题获奖名单</h2>
+    <ul>
+        <li>调用地址：
+        </li>http://wechat.palm-h.com/h5/s6/cms/index.php/Home/index/check_order
+        <li>请求方式:</li>
+        <li>参数：
+			
+        </li>
+        <li> 返回结果
+            <pre>   
+{
+   {"list":[{"username":"6666","mobile":"6666","name":"iwatch"},{"username":"222","mobile":"222222","name":"\u516c\u4ed4"}]}
+    
+}
+            </pre>
+
+    </ul>
+
+	
+
+    </ul>
+</div>
+
+<div>
+</body>
+</html>
+

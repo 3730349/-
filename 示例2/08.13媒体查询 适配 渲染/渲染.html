@@ -1,0 +1,147 @@
+n<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>渲染</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.dv_wp img{
+			width: 600px;
+			height: 450px;
+
+			/*-webkit-transition:all 1s;*/
+		}
+		.dv_wp{
+			/*width: 600px;
+			height: 450px;*/
+			/*margin:0 auto;*/
+			text-align: center;
+		}
+		.input_wp{
+			text-align: center;
+			margin-top: 20px;
+		}
+		.input_wp input{
+			margin-left: 20px;
+		}
+		.btn0{
+			-webkit-filter:blur(10px);
+			/*-webkit-transform:rotateY(360deg);*/
+		}
+		.btn1{
+			-webkit-filter:grayscale(1);
+			/*-webkit-transform:rotateY(0deg);*/
+		}
+		.btn2{
+			-webkit-filter:sepia(1);
+			/*-webkit-transform:rotateY(360deg);*/
+		}
+		.btn3{
+			-webkit-filter:saturate(3);
+			/*-webkit-transform:rotateY(0deg);*/
+		}
+		.btn4{
+			-webkit-filter:hue-rotate(90deg);
+			/*-webkit-transform:rotateY(360deg);*/
+		}
+		.btn5{
+			-webkit-filter:invert(1);
+			/*-webkit-transform:rotateY(0deg);*/
+		}
+		.btn6{
+			-webkit-filter:opacity(0.5);
+			/*-webkit-transform:rotateY(360deg);*/
+		}
+		.btn7{
+			-webkit-filter:brightness(0.5);
+			/*-webkit-transform:rotateY(0deg);*/
+		}
+		.btn8{
+			-webkit-filter:contrast(2);
+			/*-webkit-transform:rotateY(360deg);*/
+		}
+		.btn9{
+			-webkit-filter:drop-shadow(10px 10px 2px #000);
+			/*-webkit-transform:rotateY(0deg);*/
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="dv_wp">
+		<img src="btnBg.png" alt="" class="" id='img'>
+	</div>
+	<div class="input_wp">
+
+		<input type="button" value='模糊'> 
+		<input type="button" value='灰度'> 
+		<input type="button" value='黄棕色'>
+		<input type="button" value='饱和度'>
+		<input type="button" value='色相'>
+		<input type="button" value='反色'> 
+		<input type="button" value='不透明'>
+		<input type="button" value='明度'>
+		<input type="button" value='对比度'>
+		<input type="button" value='阴影'>
+	</div>
+</body>
+<script type="text/javascript">
+	var _img = document.getElementById('img');
+
+	var _inp = document.getElementsByTagName('input');
+	console.log(_inp);
+	for(let i = 0 ; i < _inp.length;i++){
+		_inp[i].onclick = function(){
+			_img.className = 'btn'+i;
+		}
+	}
+
+
+	function btn0(){
+		_img.className = 'btn0';
+	}
+	function btn1(){
+		_img.className = 'btn1';
+	}
+	function btn2(){
+		_img.className = 'btn2';
+	}
+	function btn3(){
+		_img.className = 'btn3';
+		// _img.style.webkitFilter = 'saturate(3)';
+	}
+	function btn4(){
+		_img.className = 'btn4';
+		// _img.style.webkitFilter = 'hue-rotate(90deg)';
+	}
+	function btn5(){
+		_img.className = 'btn5';
+		// _img.style.webkitFilter = 'invert(1)';
+	}
+	function btn6(){
+		_img.className = 'btn6';
+		// _img.style.webkitFilter = 'opacity(0.5)';
+	}
+	function btn7(){
+		_img.className = 'btn7';
+		// _img.style.webkitFilter = 'brightness(0.5)';
+	}
+	function btn8(){
+		_img.className = 'btn8';
+		// _img.style.webkitFilter = 'contrast(2)';
+	}
+	function btn9(){
+		_img.className = 'btn9';
+		// _img.style.webkitFilter = 'drop-shadow(10px 10px 2px #000)';
+	}
+
+
+
+
+</script>
+</html>

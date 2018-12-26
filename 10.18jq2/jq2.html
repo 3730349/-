@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.0/jquery.min.js"></script>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<!-- 	<div class="aa">1</div>
+<div class="aa">2</div>
+<div class="aa">3</div>
+<div class="aa">4</div> -->
+		<div class="box"></div>
+</body>
+<script type="text/javascript">
+	// var aa=$('.aa');
+// eval将字符串转成对象
+// eval('a'+'a')等价于aa
+/*eval('a'+'a').eq(0).on("click",function(){
+	alert(aa.eq(1).text());
+}); */
+
+		$(document).on('click',function(){
+			$('.box').toggle(1000,function(){
+				alert(1);
+			});
+		})
+</script>
+</html>

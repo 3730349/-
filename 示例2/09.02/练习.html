@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.show{
+			width:200px;
+			position: relative;
+			overflow: hidden;
+			margin: auto;
+		}
+		.box{
+			width: 4000px;
+			position: relative;
+			overflow: hidden;
+			left: 0;
+		}
+		.box img{
+			width:200px;
+			float: left;
+		}		
+		.box2 img{
+			width:200px;
+			float: left;
+		}
+		.btn{
+			width: 523px;
+			height: 52px;
+			margin: auto;
+			margin-top: 10px;
+			overflow: hidden;
+		}
+		.btn span{
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-left: 20px;
+			border: 1px solid;
+			text-align: center;
+			line-height: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="show">
+		<div class="box" id="box">
+			<div class="box1" id="box1">
+				<img src="image/1.jpg">
+				<img src="image/2.jpg">
+				<img src="image/3.jpg">
+				<img src="image/4.jpg">
+				<img src="image/5.jpg">
+			</div>
+			<div class="box2" id="box2"></div>
+		</div>
+		
+	</div>
+
+	<div class="btn" id="btn">
+		<span class="btn_le"><</span>
+		<span class="btn1">1</span>
+		<span class="btn2">2</span>
+		<span class="btn3">3</span>
+		<span class="btn4">4</span>
+		<span class="btn5">5</span>
+		<span class="btn_ri">></span>
+	</div>
+</body>
+<script type="text/javascript">
+	var box=document.getElementById("box");
+	var box1=document.getElementById("box1");
+	var box2=document.getElementById("box2");
+	var btn=document.getElementById("btn").getElementsByTagName("span");
+	box2.innerHTML=box1.innerHTML;
+
+	var c=0;
+	var time1,time2;
+	var bl=true;
+	var m=1;
+	btn[m].style.background="red";
+	function b(){
+		if (bl) {
+			c+=2;
+
+			if (c>=1000){
+				c=0;
+			}
+		}else{
+			c-=2;
+			if (c<=0) {
+				c=1000;
+			}
+		}
+	if (c%200==0) {
+				clearInterval(time1);
+		if (bl) {
+	 	for (var i = 1; i < btn.length-1; i++) {
+	 	btn[i].style.background="";
+		 }
+		 
+	 	 m++;
+	 	
+	 	if (m>5){
+	 		m=1;
+	 	}
+	 	 btn[m].style.background="red";
+
+	 }else{
+	 	for (var i = 1; i < btn.length-1; i++) {
+	 	btn[i].style.background="";
+		 }
+		 if (m<1) {
+	 		m=5;
+	 	}
+		 btn[m].style.background="red";
+	 		m--;
+	 	
+	 	
+
+	 }
+				time2=setTimeout(function(){
+					time1=setInterval(b,10);
+				},1000);
+			}
+
+		box.style.left=-c+"px";
+
+
+	}
+	 time1=setInterval(b,10);
+	 
+
+
+
+	for (var i = 1; i < btn.length-1; i++) {
+		btn[i].a=i;
+		btn[i].onclick=function(){
+
+			box.style.left=-(this.a-1)*200+"px";
+			c=(this.a-1)*200;
+				clearInterval(time1);
+				clearInterval(time2);
+
+				time2=setTimeout(function(){
+					time1=setInterval(b,10);
+				},1000);
+		for (var i = 1; i < btn.length-1; i++) {
+	 	btn[i].style.background="";
+		 }
+			this.style.background="red";
+			m=this.a;
+
+		}
+	}
+	btn[0].onclick=function(){
+/*		if (!bl) {
+			if (c%200==0) {
+			m++;
+			}
+		}*/
+		bl=true;
+			console.log(m);
+
+		if (c%200==0) {
+			m++;
+			console.log(m);
+
+			}
+		
+	}	
+	btn[6].onclick=function(){
+		
+		
+/*		if (bl) {
+			if (c%200==0) {
+			m--;
+			}
+		}*/
+		console.log(m);
+		bl=false;
+		if (c%200==0) {
+			m--;
+			console.log(m);
+			}
+		
+
+	}
+</script>
+</html>

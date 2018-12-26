@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		background: #ccc;
+	}
+
+	.accordian {
+		width: 805px;
+		height: 320px;
+		overflow: hidden;
+
+		margin: 100px auto;
+		box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+
+	}
+
+	.accordian ul {
+		width: 2000px;
+	}
+
+	.accordian ul:hover li {
+		width: 40px;
+	}
+
+	.accordian ul li:hover {
+		width: 640px;
+	}
+
+	.accordian ul li {
+		float: left;
+		display: block;
+		border-left: 1px solid #ccc;
+		position: relative;
+		width: 160px;
+
+		box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+		transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+	}
+
+	.accordian ul li img {
+		display: block;
+		border: 0;
+	}
+
+	.image_title {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 640px;
+		background: rgba(0, 0, 0, 0.5);
+	}
+
+	.image_title a {
+		display: block;
+		color: #fff;
+		padding: 20px;
+		font-size: 16px;
+		text-decoration: none;
+	}
+	</style>
+</head>
+<body>
+<!-- We will make a simple accordian with hover effects 
+The markup will have a list with images and the titles-->
+	<div class="accordian">
+		<ul>
+			<li>
+				<div class="image_title">
+					<a href="#">KungFu Panda</a>
+				</div>
+				<a href="#">
+					<img src="img1.jpg"/>
+				</a>
+			</li>
+			<li>
+				<div class="image_title">
+					<a href="#">Toy Story 2</a>
+				</div>
+				<a href="#">
+					<img src="img2.jpg"/>
+				</a>
+			</li>
+			<li>
+				<div class="image_title">
+					<a href="#">Wall-E</a>
+				</div>
+				<a href="#">
+					<img src="img3.jpg"/>
+				</a>
+			</li>
+			<li>
+				<div class="image_title">
+					<a href="#">Up</a>
+				</div>
+				<a href="#">
+					<img src="img4.jpg"/>
+				</a>
+			</li>
+			<li>
+				<div class="image_title">
+					<a href="#">Cars 2</a>
+				</div>
+				<a href="#">
+					<img src="img5.jpg"/>
+				</a>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

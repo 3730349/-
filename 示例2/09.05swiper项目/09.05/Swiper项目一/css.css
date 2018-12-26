@@ -1,0 +1,777 @@
+	*{
+		padding: 0;
+		margin: 0;
+	}
+/*       .wp {
+width: 640px;
+height: 1136px;
+position: relative;
+background: black;
+display: none;
+ } */
+    .box{
+      width: 640px;
+      height: 1136px;
+      position: absolute;
+      /*display: none;*/
+
+
+   }
+	.swiper-container {
+	   width: 640px;
+	   height: 1136px;
+	   position: absolute;
+      background: black;
+      display: none;
+   	 }
+    .swiper-slide {
+      
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+   }
+
+
+   .box1{
+      width: 640px;
+      height: 1136px;
+      position: absolute;
+      display: none;
+
+   }
+   .bg_1{
+
+      width: 640px;
+      height: 100%;
+      left: 0;
+      position: absolute;
+   }
+   .logo_1{
+      position: absolute;
+      left: 39px;
+      top: 34px;
+      animation: lg 1s ;
+   } 
+      /*logo动画*/
+    @-webkit-keyframes lg{
+
+     0%{
+   opacity: 0;
+   left: -200px;
+}
+   100%{
+   opacity: 1;
+   left: 39px;
+   }
+  
+ }   
+   .music_1{
+      position: absolute;
+      right: 12px;
+      top: 18px;
+   }
+   /*大圆*/
+   .Bcircle{
+      width: 80px;
+      height: 80px;
+ /*     background: white;
+      opacity: 0.5;*/
+      background: rgba(255,255,255,.5);
+      border-radius: 50%;
+      position: absolute;
+      top: 703px;
+      right: 285px;
+      animation: circle 1s infinite;
+
+   } 
+   /*按钮动画*/
+   @-webkit-keyframes circle{
+      0%{
+         transform: scale(0.5);
+      }
+      100%{
+         transform: scale(1);
+      }
+
+   }
+   /*小圆*/
+   .Scircle_1{
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+   }
+   .box1_2{
+      width: 640px;
+      height: 1136px;
+      position: absolute;
+      display: none;
+
+   }
+   .box1_wz1{
+      position: absolute;
+      top: 136px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation: p1_wz1 1s 1s;
+      animation-fill-mode: forwards;
+   }
+
+          /*文字动画*/
+   @-webkit-keyframes p1_wz1{
+      0%{
+         opacity: 0;
+      }
+      50%{
+         opacity: 0.5;
+      }
+      100%{
+         opacity: 1;
+      }
+
+   }
+   .arrows{
+      position: absolute;
+      bottom: 15px;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      margin: auto;
+      animation: arrows 1s 2s infinite alternate;
+   }
+    /*箭头动画*/
+   @-webkit-keyframes arrows{
+      100%{
+         opacity: 1;
+         transform: translateY(-10px);
+      }
+
+   }
+   .p3_smo1{
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      animation:p3_smo 1.5s 0.3s; 
+      animation-fill-mode: forwards;
+   }   
+   .p3_smo3{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+       opacity: 0;
+      animation:p3_smo 1.5s 0.3s; 
+      animation-fill-mode: forwards;
+   }
+    /*烟动画*/
+   @-webkit-keyframes p3_smo{
+      0%{
+         opacity: 0;
+      }
+      50%{
+         opacity: 0.5;
+      }
+      100%{
+         opacity: 1;
+      }
+
+   }
+   .p3_wz{
+      width: 350px;
+      height: 158px;
+      position: absolute;
+      top: 300px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation:p3_wz 1s 1.3s; 
+      animation-fill-mode: forwards;
+   }
+       /*文字动画*/
+   @-webkit-keyframes p3_wz{
+      0%{
+         opacity: 0;
+      }
+      50%{
+         opacity: 0.5;
+      }
+      100%{
+         opacity: 1;
+      }
+
+   }
+/*烟*/
+   .p4_smo1{
+      width: 640px;
+      height: 1136px;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      animation:p3_smo 1.5s 0.3s; 
+      animation-fill-mode: forwards;
+   }
+   .p4_smo2{
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      animation:p3_smo 1.5s 0.3s; 
+      animation-fill-mode: forwards;
+   }   
+   .p4_smo3{
+      width: 640px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      animation:p3_smo 1.5s 0.3s; 
+      animation-fill-mode: forwards;
+   }
+
+/*4*/
+   .p4_wz{
+      position: absolute;
+      bottom: 300px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation:p3_wz 1s 1.3s; 
+      animation-fill-mode: forwards;
+   }
+
+
+ .p5_wz{
+    width: 272px;
+    height: 116px;
+      position: absolute;
+      top: 280px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation:p3_wz 1s 1.3s; 
+      animation-fill-mode: forwards;
+   }
+
+   /*地球*/
+   .roll_5{
+      position: absolute;
+      top: 410px;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+   }
+    /*烟*/
+.p5_smo1{
+   position: absolute;
+    left: 33px;
+    top: 54px;
+   opacity: 0;
+   animation:p3_smo 1.5s 0.3s; 
+   animation-fill-mode: forwards;
+}
+.p5_smo2{
+   position: absolute;
+    left: 142px;
+    top: -53px;
+   opacity: 0;
+   animation:p3_smo 1.5s 0.3s; 
+   animation-fill-mode: forwards;
+}
+.p5_smo3{
+   position: absolute;
+left: 161px;
+    top: 49px;
+   opacity: 0;
+   animation:p3_smo 1.5s 0.3s; 
+   animation-fill-mode: forwards;
+}  
+
+/*6*/
+.people6_1{
+   position: absolute;
+   top: 0;
+   left:-640px;
+   animation: peopleLeft 1s 0.5s;
+   animation-fill-mode: forwards;
+
+}
+@-webkit-keyframes peopleLeft{
+   100%{
+      left: 0;
+   }
+
+} 
+.people6_2{
+   position: absolute;
+   top: 402px;
+   right: -640px;
+   animation: peopleRight 1s 1s;
+   animation-fill-mode: forwards;
+}
+@-webkit-keyframes peopleRight{
+   100%{
+      right: 0;
+   }
+
+} 
+.p6_wz1{
+   width: 370px;
+   height: 100px;
+   position: absolute;
+   top: 242px;
+   left: 0;
+   right: 0;
+   margin: auto;
+   opacity: 0;
+   animation:p3_wz 1s 1.3s; 
+   animation-fill-mode: forwards;
+}
+
+.box6{
+      width: 640px;
+      height: 1136px;
+      position: absolute;
+      display: none;
+
+   }
+
+      /*大圆*/
+   .Bcircle_6{
+      width: 80px;
+      height: 80px;
+      background: rgba(255,255,255,.5);
+      border-radius: 50%;
+      position: absolute;
+      top: 378px;
+      left: 0;
+      right: 0px;
+      margin: auto;
+      animation: circle 1s infinite;
+
+   } 
+      /*小圆*/
+   .Scircle_6{
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+   }
+
+   /*7*/
+   .cloud7_1{
+      position: absolute;
+      left: -113px;
+      top: 118px;
+      opacity: 0;
+      animation:cloud1_1 1s 1s, cloud1_2 1.5s 2s;
+      animation-fill-mode: forwards;
+   }   
+   .cloud7_2{
+       position: absolute;
+       left: 0;
+       top: 338px;
+       opacity: 0;
+       animation:cloud1_1 1s 1s, cloud1_2 1.5s 2s;
+       animation-fill-mode: forwards;
+   }  
+   .cloud7_3{
+      position: absolute;
+      right: 0px;
+      top: 538px;
+      opacity: 0;
+      animation:cloud1_1 1s 1s, cloud2 1.5s 2s;
+      animation-fill-mode: forwards;
+   }
+   /*左边云动画*/
+      @-webkit-keyframes cloud1_1{
+      100%{
+         opacity: 1;
+      }
+
+   }
+
+   @-webkit-keyframes cloud1_2{
+
+      100%{
+         left: -320px;
+      }
+
+   }
+   /*右边云动画*/
+   @-webkit-keyframes cloud2{
+
+      100%{
+         right: -532px;
+      }
+
+   }
+
+   .p7_wz{
+    width: 367px;
+    height: 117px;
+    position: absolute;
+    top: 298px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    animation: p7_wz 1s 2s;
+    animation-fill-mode: forwards;
+   }
+     /*文字动画*/
+   @-webkit-keyframes p7_wz{
+      100%{
+        opacity: 1;
+      }
+
+   }
+
+   /*8*/
+   .sj{
+      width: 640px;
+      height: 400px;
+      position: absolute;
+      top: 245px;
+      opacity: 0;
+      animation: sjing1 1.5s,sjing2 1s 0.5s infinite alternate;
+      /*animation-fill-mode: forwards; */
+      /*background: red;*/
+   }
+   .p8_1{
+      position: absolute;
+      top: 99px;
+      left: 99px;
+   }   
+   .p8_2{
+      position: absolute;
+      top: 0px;
+      left: 269px;
+   }   
+   .p8_3{
+      position: absolute;
+      top: 83px;
+      left: 415px;
+   }
+   /*水晶动画*/
+   @-webkit-keyframes sjing1{
+      100%{
+         opacity:0.8;
+      }
+
+   }     
+   @-webkit-keyframes sjing2{
+      0%{
+         opacity: 1;
+         top: 245px;
+      }
+      100%{
+         top: 243px;
+         opacity: 1;
+      }
+
+   }  
+
+   .p8_wz{
+      position: absolute;
+      top: 160px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation: p8_wz 1s 1.5s;
+      animation-fill-mode: forwards; 
+   }
+   /*文字动画*/
+   @-webkit-keyframes p8_wz{
+
+      100%{
+        
+         opacity: 1;
+      }
+
+   }  
+   .huan{
+    width: 102px;
+    height: 102px;
+    position: absolute;
+    top: 333px;
+    left: 258px;
+
+   }
+   .p9_1{
+      width: 124px;
+      height: 124px;
+      animation:p9_11 1s,p9_12 4s 0.8s infinite linear;
+      opacity: 0;
+   }   
+      /*环动画*/
+   @-webkit-keyframes p9_11{
+      100%{
+         opacity: 1;
+      }
+      
+
+   }  
+   @-webkit-keyframes p9_12{
+      0%{
+         opacity: 1;
+      }
+
+      100%{
+         opacity: 1;
+         transform: rotate(360deg);
+      }
+
+   } 
+
+   .p9_2{
+    width: 432px;
+    height: 270px;
+    position: absolute;
+    left: 127px;
+    top: 280px;
+    opacity: 0;
+    animation:p9_2 1s 1.5s infinite alternate;
+    /*animation-fill-mode: forwards;*/
+    
+   }
+   /*牛头动画 */
+   @-webkit-keyframes p9_2{
+      0%{
+         
+         opacity: 0.3;
+      }      
+      50%{
+         
+         opacity: 0.6;
+      }
+      100%{
+         
+         opacity: 1;
+             }
+
+   }  
+   .p9_wz{
+      position: absolute;
+      bottom: 300px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation:p9_wz 1s 1.5s;
+      animation-fill-mode: forwards;
+   }
+      /*文字动画 */
+   @-webkit-keyframes p9_wz{
+      100%{
+         opacity: 1;
+             }
+
+   }
+
+   /*10*/
+   .p10_left1{
+      position: absolute;
+    top: 500px;
+    left: 253px;
+    opacity: 0;
+    animation:p10_1 1.5s 1s,  p10_left 3s 2.5s;
+   }   
+   .p10_left2{
+      position: absolute;
+    top: 358px;
+    left: 326px;
+    opacity: 0;
+    animation:p10_1 1.5s 1s,  p10_left 3s 2.5s;
+   }
+   .p10_right1{
+      position: absolute;
+      top:464px;
+      right: 186px;
+      opacity: 0;
+      animation:p10_1 1.5s 1s,  p10_right 3s 2.5s;
+   }   
+   .p10_right2{
+      position: absolute;
+      top:371px;
+      right: 238px;
+      opacity: 0;
+      animation:p10_1 1.5s 1s,  p10_right 3s 2.5s;
+   }
+   /*方块显示动画 */
+   @-webkit-keyframes p10_1{
+      0%{
+         opacity: 0.2;
+             }      
+      50%{
+         opacity: 0.5;
+             }
+      100%{
+         opacity: 1;
+             }
+
+   }
+   /*左边移动动画*/
+   @-webkit-keyframes p10_left{
+       0%{
+         opacity: 1;
+       }        
+       50%{
+         opacity: 0.5;
+       } 
+      100%{
+         opacity: 0.1;
+        left: -120px;
+             }
+
+   }   
+   /*右边移动动画*/
+   @-webkit-keyframes p10_right{
+       0%{
+         opacity: 1;
+       } 
+       50%{
+         opacity: 0.5;
+       } 
+      100%{
+         opacity: 0.1;
+         right: -131px;
+         }
+
+   }
+   .p10_wz{
+      position: absolute;
+      top: 271px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation:p10_wz 1.5s 4.5s;
+      animation-fill-mode: forwards;
+
+   }
+      /*文字动画*/
+   @-webkit-keyframes p10_wz{
+      100%{
+         opacity: 1;
+         }
+
+   }
+   /*11*/
+   .p11_1{
+      position: absolute;
+      top: 208px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation:p11_1 2s 0.6s;
+      animation-fill-mode: forwards;
+
+   }   
+   .p11_2{
+      position: absolute;
+      top: 179px;
+      right: 21px;
+      opacity: 0;
+      animation:p11_2 2s 2.4s;
+      animation-fill-mode: forwards;
+      
+   }
+        /*标语动画*/ 
+   @-webkit-keyframes p11_1{
+      0%{
+         opacity: 1;
+         transform: scale(0.5);
+      }
+      50%{
+         opacity: 1;
+         transform: scale(1.1);
+      }
+      100%{
+         opacity: 1;
+         transform: scale(1);
+         }
+
+   }
+     /*标语动画*/ 
+   @-webkit-keyframes p11_2{
+      0%{
+         opacity: 1;
+         transform: scale(0.5);
+      }
+            50%{
+         opacity: 1;
+         transform: scale(1.1);
+      }
+      100%{
+         opacity: 1;
+         transform: scale(1);
+         }
+
+   }
+/*灯光*/
+   .p11_3{
+      height: 515px;
+      width: 640px;
+      position: absolute;
+      top: 153px;
+      left: 0;
+      opacity: 0;
+      animation:p11_3 3s 2s infinite alternate;
+   }
+   /*灯光动画*/ 
+   @-webkit-keyframes p11_3{
+      100%{
+         opacity: 1;
+         }
+
+   }
+   .p11_wz{
+      position: absolute;
+      bottom: 378px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0;
+      animation:p11_wz 1s 2.5s;
+      animation-fill-mode: forwards;
+   }
+      /*灯光动画*/ 
+   @-webkit-keyframes p11_wz{
+      100%{
+         opacity: 1;
+         }
+
+   }

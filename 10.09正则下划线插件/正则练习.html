@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div>手机<input type="text"  id="text"></div>
+	<div>姓名<input type="text"  id="text2" style="margin-top: 100px"></div>
+	<div>邮箱<input type="text"  id="text3" style="margin-top: 100px"></div>
+</body>
+<script type="text/javascript">
+	var te=document.getElementById("text");
+	var te2=document.getElementById("text2");
+	var te3=document.getElementById("text3");
+	
+	//手机验证
+	te.onblur=function(){
+		var reg=/^(137)\d{8}$/;
+		var text=te.value;
+		if (!(reg.test(text))) {
+			console.log("错误");
+		};
+		if (/[a-z]]/g) {
+			console.log("错误88888");
+		}
+	}	
+	//姓名验证
+	te2.onblur=function() {
+		var text2=te2.value;
+     	var reg2=/^[\u4e00-\u9fa5]{2,4}$/;
+      	if(!reg2.test(text2)){
+        alert("请正确填写姓名！姓名为两到四个汉字。");
+        text2="";
+      }
+	}
+	te3.onblur=function() {
+		var text3=te3.value;
+		var reg3=/[a-zA-Z0-9]{1,10}@[a-zA-Z0-9]{1,5}\.[a-zA-Z0-9]{1,5}/;
+      	if(!reg3.test(text3.value)){
+        	alert("请正确填写邮箱！");
+        	text3="";
+     	 }
+  }
+
+
+</script>
+</html>

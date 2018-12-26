@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>	
+<script type="text/javascript">
+/*var score=80;
+if (score>=90) {
+	alert("A")
+}
+else if (score>60&&score<89) {
+	alert("B")
+}else{
+	alert("C")
+}*/
+
+/*var num=153;
+
+var num2=(num%10)*(num%10)*(num%10)+(parseInt(num/10)%10)*(parseInt(num/10)%10)*(parseInt(num/10)%10)+(parseInt(num/100)%10)*(parseInt(num/100)%10)*(parseInt(num/100)%10);
+if (num==num2) {
+	alert(num2);
+	
+}else{
+	alert("这不是水仙花数");
+}
+*/
+/*var h=100;
+var h1=100;
+for (var i = 0; i < 10; i++) {
+	h=h/2;
+	h1+=(h*2);
+}
+alert("经过"+h1+"    "+"第十次高"+h);*/
+
+
+/*var a="2123212";
+var a1=0;
+var a2=a;
+for (var i = 0; i <a.length; i++) {
+	
+	a1=10*a1+a2%10;
+	
+	a2=parseInt(a2/10);
+}
+
+if (a1==a) {
+
+	alert("回文数");
+}*/
+
+
+/*var a=1;
+
+for (var i = 1; i < 4; i++) {
+	a=(a+1)*2;
+}
+alert(a);
+*/
+
+// var a=0;
+// for (var i = 0; i < 100; i++) {
+// 	a+=i;
+// }
+// if(a%3==0){
+// 	a+=a;
+// 	alert(a);
+// }
+// else{
+// 	alert(a);
+// }
+
+//质数
+// var num=1;
+// for (var i = 2; i <=100; i++) {
+// 	for (var j = 2; j <=i; j++) {
+// 		if(i%j==0&&i!=j){
+// 			break;
+// 		}
+// 		if (i%j==0&&i==j) {
+// 			num+=i;
+// 		}
+
+// 	}
+// }
+// alert(num);
+
+/*var num=0;
+for (var i = 1; i < 10; i++) {
+	for (var j = 1; j < 10; j++) {
+		var num1+=(i*j);
+	}
+}
+alert(num);*/
+
+
+/*var num=0;
+for (var i = 1; i <=9; i++) {
+	for (var j = 1; j <=i ; j++) {
+		num+=(i*j);
+	}
+}
+alert(num);*/
+
+// 完数
+/*var k=0;
+
+for (var i = 1; i <=1000; i++) {
+
+	for (var j = 1; j <=i/2; j++) {
+
+		if (i%j==0) {
+			k+=j;
+		}
+	}
+
+	if(i==k){
+
+		alert(i);
+	}
+	k=0;
+}
+*/
+
+//1
+/*var a=4;
+for (var i = 0; i < 7; i++) {
+	a+=3;
+	if (i==4) {
+		console.log(a)
+	}
+}*/
+
+
+//2
+/*var a=1;
+for (var i = 1; i < 7; i++) {
+	a+=i;
+	console.log(a);
+}
+*/
+ //3
+/*var a=2;
+for (var i = 1; i <6; i++) {
+
+		console.log(a+"/"+i);
+
+}*/
+
+/*var a1=-12,a2=20,a=0;
+
+for (var i =1; i <9; i++) {
+	a=(a1+a2)/2;
+	a1=a2;
+	a2=a;
+	console.log(a);
+}*/ 
+
+/*var a1=4, a2=0,a3=0;
+for (var i = 0; i < 7; i++) {
+	a2+=0.5;
+	a3=a1*a2;
+	a1=a3;
+	console.log(a3);
+}*/
+
+
+ var arr=[1,56,4,23,7,5];
+ //选择排序
+/* for(var i=0; i<arr.length-1; i++) {  
+          var min  = i;  
+            for(var j=i+1; j<arr.length; j++) {  
+                if(arr[j] < arr[min]) {  
+                    min = j;  
+                }  
+            }  
+            if(i != min) {  
+                var temp = arr[i];  
+                arr[i] = arr[min];  
+                arr[min] = temp;  
+            }  
+        }  
+        console.log(arr);*/
+/*        for (var i = 0; i < arr.length-1; i++) {
+        	for (var j =i+1;j < arr.length; j++) {
+        		if (arr[i]>arr[j]) {
+        			var t=arr[i];
+        			arr[i]=arr[j];
+        			arr[j]=t;
+        		}
+        		console.log(arr);
+        		 
+        	}
+
+        }*/
+//冒泡
+var arr=[2,5,3,42,12,41,54,23,7,10];
+for (var i = 0; i < arr.length-1; i++) {
+	for (var j = 0; j < arr.length-i; j++) {
+		if (arr[j]>arr[j+1]) {
+			var t=arr[j+1];
+			arr[j+1]=arr[j];
+			arr[j]=t;
+
+		}
+	}
+}
+console.log(arr);
+
+
+/* var a=1,b=1;
+ var arr=[1,1];
+ for (var i = 2; i <10; i++) {
+ 	arr[i]=a+b;
+ 	a=b;
+ 	b=arr[i];
+ 	
+
+ }
+ console.log(arr);*/
+
+/* var n=0,a1=1,an=0;
+ for (var i = 0; i < 10; i++) {
+ 	an=n+a1;
+ 	n=a1;
+ 	a1=an;
+ 	console.log(an);
+ }*/
+
+       
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=640,user-scalable=no">
+	<style type="text/css">
+	body{
+		width: 640px;
+		height: 1136px;
+	}
+	.a{
+		width: 640px;
+		height: 1000px;
+		overflow: auto;
+	}
+		.box{
+			width: 640px;
+			height: 100px;
+			
+			line-height:100px;
+
+		}
+		.box span{
+			background: pink;
+			font-size: 3em;
+			margin-right: 10px;
+		}
+		input{
+			width: 640px;
+			height: 100px;
+			/*margin-top: 1000px;*/
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<div class="a" id="a">
+		<div class="box" id="box">
+		<span id="span">111</span>
+	</div>
+	</div>
+	
+	<input type="type" id="input">
+</body>
+<script type="text/javascript">
+	var box=document.getElementById("box");
+	var a=document.getElementById("a");
+	var span=document.getElementById("span");
+	var input=document.getElementById("input");
+	document.onkeydown=function(e){
+		var e=window.event||e;
+		var va=input.value;
+		// console.log(va);
+		if (e.keyCode==13 && e.ctrlKey) {
+
+			a.innerHTML=a.innerHTML+'<div class="box" id="box">'
+				+'<span id="span">'+va+'</span>';
+
+		}
+
+	}
+</script>
+</html>

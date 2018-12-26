@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.b{
+			opacity: 0.4;
+		}
+	</style>
+</head>
+<body>
+	<ul id="ul" bg='red'>
+		<li id="li" ></li>
+		<li></li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var ul=document.getElementById("ul");
+	var li=document.getElementById("li");
+	//生成标签对象
+	var _div=document.createElement('div');
+	_div.className='b';
+	_div.style.width='100px';
+	_div.style.height='100px';
+	_div.style.background='red';
+	setTimeout(function(){
+		//末尾插入标签对象
+		//父体.appendChild(对象)
+		li.appendChild(_div);
+
+		//插入兄弟元素前
+		//ul.insertBefore(对象,目标对象)
+		// ul.insertBefore(_div,li);
+		// li.innerHTML='<div></div>';
+		//替换
+		// document.body.replaceChild(newChild,oldChild);
+		// ul.replaceChild(_div,li);
+
+	},1000);
+
+/*	setTimeout(function(){
+		// 删除节点
+		ul.removeChild(_div);
+	},2000);*/
+	// 克隆：
+	// true：深度复制，复制整个子节点及整个子节点数
+	// false：浅复制，复制节点本身
+/*	var a= ul.cloneNode(true);
+	console.log(a);*/
+
+	//修改属性
+	// 目标对象.setAttribute('属性','值');
+/*	ul.setAttribute('data','top');
+
+	//获取属性
+	var oo=	ul.getAttribute('data');
+	setTimeout(function(){
+		// 删除属性
+		ul.removeAttribute('data');
+	},1000);
+
+	console.log(oo);*/
+
+
+</script>
+</html>

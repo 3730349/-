@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>tab切换</title>
+	<style type="text/css">
+
+		.box{
+			width: 400px;
+			height: 400px;
+			position: relative;
+		}
+		.box div{
+			width: 400px;
+			height: 400px;
+			text-align: center;
+			line-height: 400px;
+			font-size: 3em;
+			position: absolute;
+		}		
+		.box div:nth-child(1){
+			background: red;
+		}		
+
+		.box div:nth-child(2){
+			background: blue;
+			display: none;
+		}		
+		.box div:nth-child(3){
+			background: pink;
+			display: none;
+		}		
+		.box div:nth-child(4){
+			background: yellow;
+			display: none;
+		}
+		.btn{
+			overflow: hidden;
+		}
+		.btn span{
+			width: 100px;
+			height: 50px;
+			float: left;
+			text-align: center;
+			line-height: 50px;
+			font-size: 1.5em;
+		}		
+
+		.btn span:nth-child(1){
+			background: red;
+		}		
+		.btn span:nth-child(2){
+			background: blue;
+		}		
+		.btn span:nth-child(3){
+			background: pink;
+		}		
+		.btn span:nth-child(4){
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div id="box1">页面1</div>
+		<div id="box2">页面2</div>
+		<div id="box3">页面3</div>
+		<div id="box4">页面4</div>
+	</div>
+	<div class="btn">
+		<span id="bnt1">按钮1</span>
+		<span id="bnt2">按钮2</span>
+		<span id="bnt3">按钮3</span>
+		<span id="bnt4">按钮4</span>
+	</div>
+</body>
+<script type="text/javascript">
+	var box1=document.getElementById("box1");
+	var box2=document.getElementById("box2");
+	var box3=document.getElementById("box3");
+	var box4=document.getElementById("box4");
+
+	var btn1=document.getElementById("bnt1");
+	var btn2=document.getElementById("bnt2");
+	var btn3=document.getElementById("bnt3");
+	var btn4=document.getElementById("bnt4");
+
+
+	btn1.onclick=function(){
+		a();
+		box1.style.display="block";
+
+	}	
+	btn2.onclick=function(){
+		a();
+		box2.style.display="block";
+
+	}	
+	btn3.onclick=function(){
+		a();
+		box3.style.display="block";
+
+	}	
+	btn4.onclick=function(){
+		a();
+		box4.style.display="block";
+
+	}
+
+	function a(){
+		box4.style.display="none";
+		box2.style.display="none";
+		box3.style.display="none";
+		box1.style.display="none";
+	}
+</script>
+</html>

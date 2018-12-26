@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width: 600px;
+	height: 529px;
+	/*position: relative;*/
+	overflow: hidden;
+	margin: auto;
+}
+.show{
+	width: 3600px;
+	height: 479px;
+	position: relative;
+	left: 0;
+	/*overflow: hidden;*/
+	transition: all 1s;
+}
+.i1,.i2,.i3,.i4,.i5,.i6{
+	width: 600px;
+	height: 479px;	
+	float: left;
+	
+}
+
+/*大图片*/
+.img{
+	width: 600px;
+	height: 329px;
+	background-size: 100% 100%;
+}
+.i1_1{
+	background: url(img/images/201302040909245804.jpg) no-repeat;
+}
+.i1_2{
+	background: url(img/images/201301311612466502.jpg) no-repeat;
+}
+.i1_3{
+	background: url(img/images/201301300939229190.jpg) no-repeat;
+}
+.i1_4{
+	background: url(img/images/201301281416578921.jpg) no-repeat;
+}
+.i1_5{
+	background: url(img/images/201301251010573290.jpg) no-repeat;
+}
+.i1_6{
+	background: url(img/images/201301230949139489.jpg) no-repeat;
+}
+/*中间三张图片*/
+.i12{
+	height: 148px;
+	/*overflow: hidden;*/
+}
+.i12 img{
+	width: 199px;
+	height: 148px;
+	float: left;
+}
+/*中间的那张图片*/
+.i12 img:nth-child(2){
+	margin:0 1px;
+}
+/*底部*/
+.bot{
+	width: 600px;
+	height: 50px;
+/* 	position: absolute;
+bottom: 0; */
+}
+/*底部按钮*/
+.bot span{
+	width: 100px;
+	height: 50px;
+	float:left;
+	background: #5A5A5A;
+	text-align: center;
+	line-height: 50px;
+	font-size: 0.7em;
+	color: white;
+
+}
+

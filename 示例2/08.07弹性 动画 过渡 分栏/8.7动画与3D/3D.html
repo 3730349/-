@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D</title>
+	<style type="text/css">
+		.wp .box{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 3em;
+			text-align: center;
+			line-height: 200px;
+			transition: all 0.3s;
+		}
+		.wp{
+			transform:rotateX(15deg) rotateY(-15deg);
+			width:200px;
+			height: 200px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			/*使被转换的子元素保留其3D转换*/
+			transform-style: preserve-3d;
+			margin: auto;
+			animation:aa 5s infinite alternate;
+		}
+		.wp2{
+			width:100px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			/*使被转换的子元素保留其3D转换*/
+			transform-style: preserve-3d;
+			margin: auto;
+		}
+		.wp2 .box2{
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-size: 1.2em;
+			text-align: center;
+			line-height: 100px;
+		}
+		.wp .box:nth-child(1){
+			background: rgba(255,0,0,.5);
+			transform:rotateX(90deg) translateZ(100px);
+		}
+		.wp .box:nth-child(2){
+			background: rgba(255,255,0,.5);
+
+			transform:rotateY(-90deg) translateZ(100px);
+		}
+		.wp .box:nth-child(3){
+			background: rgba(255,0,255,.5);
+			transform:rotateY(90deg) translateZ(100px);
+		}
+		.wp .box:nth-child(4){
+			background: rgba(0,255,0,.5);
+			transform:rotateX(-90deg) translateZ(100px);
+		}
+		.wp .box:nth-child(5){
+			background: rgba(0,255,255,.5);
+			transform:translateZ(100px);
+		}
+		.wp .box:nth-child(6){
+			background: rgba(100,200,200,.5);
+			transform:rotateY(180deg) translateZ(100px);
+		}
+
+
+		
+		.wp2 .box2:nth-child(1){
+			background: rgba(255,0,0,.5);
+			transform:rotateX(90deg) translateZ(50px);
+		}
+		.wp2 .box2:nth-child(2){
+			background: rgba(255,255,0,.5);
+
+			transform:rotateY(-90deg) translateZ(50px);
+		}
+		.wp2 .box2:nth-child(3){
+			background: rgba(255,0,255,.5);
+			transform:rotateY(90deg) translateZ(50px);
+		}
+		.wp2 .box2:nth-child(4){
+			background: rgba(0,255,0,.5);
+			transform:rotateX(-90deg) translateZ(50px);
+		}
+		.wp2 .box2:nth-child(5){
+			background: rgba(0,255,255,.5);
+			transform:translateZ(50px);
+		}
+		.wp2 .box2:nth-child(6){
+			background: rgba(100,200,200,.5);
+			transform:rotateY(180deg) translateZ(50px);
+		}
+		/*.wp:hover .box:nth-child(1){
+			transform:rotateX(90deg) translateZ(300px);
+		}
+		.wp:hover .box:nth-child(2){
+			transform:rotateY(-90deg) translateZ(300px);
+		}
+		.wp:hover .box:nth-child(3){
+			transform:rotateY(90deg) translateZ(300px);
+		}
+		.wp:hover .box:nth-child(4){
+			transform:rotateX(-90deg) translateZ(300px);
+		}
+		.wp:hover .box:nth-child(5){
+			transform:translateZ(300px);
+		}
+		.wp:hover .box:nth-child(6){
+			transform:rotateY(180deg) translateZ(300px);
+		}*/
+		@-webkit-keyframes aa{
+			100%{
+				transform:rotateX(1500deg) rotateY(-500deg);
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="wp">
+		<div class="box">top</div>
+		<div class="box">left</div>	
+		<div class="box">right</div>	
+		<div class="box">btm</div>	
+		<div class="box">face</div>	
+		<div class="box">back</div>	
+
+		<div class="wp2">
+			<div class="box2">top</div>
+			<div class="box2">left</div>	
+			<div class="box2">right</div>	
+			<div class="box2">btm</div>	
+			<div class="box2">face</div>	
+			<div class="box2">back</div>	
+		</div>
+	</div>
+</body>
+</html>

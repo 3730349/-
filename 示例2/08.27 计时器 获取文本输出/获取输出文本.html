@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="sb">sb</div>
+	<input type="text" name="" value="dsfjakdd" id="input">
+</body>
+
+<script type="text/javascript">
+	var sb=document.getElementById("sb");
+	var input=document.getElementById("input");
+	// 获取文本
+	var aa=sb.innerText;
+	var bb=sb.innerHTML;
+
+	//输出文本 不能识别标签
+	// sb.innerText="实际付好卡";
+
+	// 可以识别标签
+	sb.innerHTML="<div>送快递发货</div>";
+	document.onclick=function(){
+		console.log(input.value);
+	}
+
+	console.log(bb);
+</script>
+</html>

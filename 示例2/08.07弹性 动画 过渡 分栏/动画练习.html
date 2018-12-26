@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	.wp{
+			/*transform: rotateX(49deg) rotateY(83deg); */
+			transform: rotateX(10deg);
+			width: 50px;
+			height: 100px;
+			position: relative;
+			/*使被转换的的子元素保留其3d属性*/
+			transform-style: preserve-3d;
+			margin: 300px;
+			animation: a 1s 10 ;
+			/*animation: aa 5s 6 alternate;*/
+		}
+		.box{
+			width: 50px;
+			background: url(sdfsd);
+			height: 100px;;
+			/*top: 0;
+			left: 0;*/
+ 			background: green;
+			display: -webkit-box
+		}
+		.box1{
+			border: 1px solid red;
+			position: absolute;
+			
+			/*margin: 300px;*/
+			/*transform-style: preserve-3d;*/
+			/*transform: rotateY(30deg);*/
+		}
+		.box2{
+			background: rgba(255,0,0,0.5);
+			position: absolute;
+			transform: translateZ(60px);
+
+
+		}
+		.box3{
+			background: rgba(0,255,0,0.5);
+			position: absolute;
+			transform:rotateY(45deg) translateZ(60px);
+		}
+		.box4{
+			background: rgba(0,0,255,0.5);
+			position: absolute;
+			transform:rotateY(-45deg) translateZ(60px);
+
+		}
+		.box5{
+			background: rgba(255,255,0,0.5);
+			position: absolute;
+			transform:rotateY(-45deg) translateZ(-60px);
+
+		}
+		.box6{
+			background: rgba(255,0,255,0.5);
+			position: absolute;
+			transform: translateZ(-60px);
+
+		}
+		.box7{
+			background: rgba(0,255,255,0.5);
+			position: absolute;
+			transform:rotateY(45deg) translateZ(-60px);
+			
+
+		}
+		.box8{
+			background: rgba(100,5,255,0.5);
+			position: absolute;
+			transform:rotateY(90deg) translateZ(-60px);
+			
+
+		}
+		.box9{
+			background: rgba(5,210,55,0.5);
+			position: absolute;
+			transform:rotateY(90deg) translateZ(60px);
+			
+
+		}
+		@-webkit-keyframes a{
+
+			100%{
+				transform: rotateY(360deg);
+				/*transform-origin: 50% 0;*/
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="wp">
+		<div class="box box1"></div>
+		<div class="box box2">1</div>
+		<div class="box box3">2</div>
+		<div class="box box4">3</div>
+		<div class="box box5">4</div>
+		<div class="box box6">5</div>
+		<div class="box box7">6</div>
+		<div class="box box8">7</div>
+		<div class="box box9">8</div>
+		
+	</div>
+</body>
+</html>

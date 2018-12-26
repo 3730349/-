@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过渡</title>
+	<style type="text/css">
+		.box{
+			width: 100px;
+			height: 100px;
+			background: red;
+			/*过渡*/
+			/*过渡属性设置*/
+			/*transition-property:all; */
+			/*过渡时间*/
+			/*transition-duration: 0.5s;*/
+			/*运动曲线*/
+			/*transition-timing-function:linear */
+			/*延迟时间*/
+			/*transition-delay: 1s;*/
+
+			transition: all 0.3s linear 1s;
+		}
+		.box:hover{
+			border-radius: 50px;
+			background: yellow;
+			
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

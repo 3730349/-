@@ -1,0 +1,124 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.box{
+	width: 640px;
+	height: 1136px;
+	position: relative;
+	overflow:hidden; 
+}
+.bg{
+	/*height: 100%;*/
+	width: 640px;
+	height: 1136px;
+	/*position: absolute;*/
+	background: url(img/bg.jpg);
+	background-size: 100% 100%;
+}
+.bird{
+	position: absolute;
+	left: 200px;
+	top: 630px;
+}
+.start{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 730px;
+}
+.pipe1_1{
+	width: 640px;
+	height: 1000px;
+	position: absolute;
+	top: 0;
+	right: -640px;
+	overflow: hidden;
+
+}
+.pipe1_2{
+	width: 640px;
+	height: 1000px;
+	position: absolute;
+	top: 0;
+	right: -1280px;
+
+
+
+}
+.pipe2{
+	/*position: absolute;*/
+	margin-left:190px;
+	height: 1000px;
+	width: 130px;
+	float: left;
+	top: 0;
+}
+
+.pipe3{
+	position: absolute;
+	float: left;
+	height: 1000px;
+	width: 130px;
+	top: 0;
+	left: 70px;
+}
+.downpipe{
+	width: 130px;
+	/*height: 200px;*/
+	position: absolute;
+	bottom: 0;
+
+}
+.uppipe{
+	width: 130px;
+	position: absolute;
+	top: 0;
+}
+.num{
+	width: 640px;
+	position: absolute;
+	top: 200px;
+	text-align: center;
+
+}
+/* .num img{
+	position: absolute;
+	float: left;
+	
+} */
+.score{
+	position: absolute;
+	width: 640px;
+	height: 450px;
+   top:0px;
+   bottom: 0;
+   margin: auto;
+   display: none;
+
+}
+.ov{
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+}
+.mes{
+	width: 300px;
+	height: 180px;
+	top: 80px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+}
+.sco{
+	position: absolute;
+	top: 471px;
+	right: 196px;
+	display: none;
+}
